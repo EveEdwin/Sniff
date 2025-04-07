@@ -23,7 +23,6 @@ function App() {
       <Component9 />
       <Component6 />
       <Component11 />
-      {/* <TestimonialSlider /> */}
       <Component13  />
       <Component10 />
       <Component7 />
