@@ -16,7 +16,7 @@ function Component10() {
                     Download the Sniffi App for a Pawsome Experience! 🐾✨ Book appointments, track pet health,<br /> and get expert care—right at your fingertips!
                 </div>
                 <img
-                    src="./public/app.jpg"
+                    src="/app.jpg"
                     alt=""
                     className="w-[200px] lg:w-[300px] h-auto rounded-lg mx-auto lg:mx-0 transition-transform duration-300 hover:scale-105"
                 />
