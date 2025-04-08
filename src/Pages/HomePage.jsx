@@ -2,7 +2,6 @@ import React from 'react'
 import Component16 from '../preComponent/component16'
 import Component15 from '../preComponent/component15'
 import Component14 from '../preComponent/component14'
-
 import Component6 from '../preComponent/component6'
 import Component11 from '../preComponent/component11'
 import Component13 from '../preComponent/component13'
