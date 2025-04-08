@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPaw } from 'react-icons/fa';
+import { IoPawOutline } from "react-icons/io5";
 
 function Component2() {
   const services = [
@@ -36,24 +37,30 @@ function Component2() {
   ];
 
   return (
-    <div className="bg-[#FFECEC] py-10 px-4 sm:px-6 md:px-10 lg:px-20 min-h-screen">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center text-[#3F3D56] mb-8 sm:mb-10 md:mb-12 relative group">
-        We Provide <span className="text-[#FE5F62]">Best Services</span>
-        <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-5px] w-0 h-[3px] bg-[#FE5F62] transition-all duration-300 group-hover:w-full"></span>
-      </h1>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
+    <div className="w-full max-w-[1440px] mx-auto py-12 px-4 md:px-8 bg-red-200/50 overflow-hidden">
+      <div className="text-center mb-12 md:mb-16">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold font-['Inter'] tracking-wider">
+          <span className="text-[#3F3D56]">We Provide </span>
+          <span className="text-[#FE5F62]">Best Services</span>
+        </h2>
+      </div>
+      
+      <div className="flex flex-col md:flex-row flex-wrap justify-center  gap-8 md:gap-6 lg:gap-12">
         {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-white p-4 sm:p-5 md:p-6 rounded-lg shadow-[4px_4px_8px_rgba(0,0,0,0.15)] border border-[#FE5F62] transition-all transform hover:scale-105 hover:shadow-[8px_8px_15px_rgba(0,0,0,0.2)]"
-          >
-            <div className="flex items-center gap-2 mb-2 sm:mb-3">
-              <FaPaw className="text-[#FE5F62] text-lg sm:text-xl" />
-              <h2 className="text-lg sm:text-xl font-semibold text-[#FE5F62] hover:underline">{service.title}</h2>
+          <div key={index} className="relative w-full max-w-[400px] mx-auto md:mx-0">
+            <div className="absolute -top-7 left-7 w-14 h-14 bg-[#FFFFFF] rounded-full outline-[0.70px] outline-offset-[-0.70px] outline-[#FE5F62] overflow-hidden">
+              <div className="w-full h-full flex items-center justify-center bg-red-200/50 rounded-full">
+                <IoPawOutline className="w-10 h-10 text-[#FE5F62]" />
+              </div>
             </div>
-            <p className="text-gray-700 text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed">{service.desc}</p>
-            <span className="text-[#FE5F62] font-medium text-sm sm:text-base cursor-pointer">{service.status}</span>
+            <div className="w-full h-60 bg-[#FFFFFF] rounded-xl outline-[0.70px] outline-offset-[-0.70px] outline-[#FE5F62] overflow-hidden p-6 pt-10">
+              <h3 className="text-[#FE5F62] text-2xl md:text-3xl font-medium font-['Inter'] tracking-wide">{service.title}</h3>
+              <p className="text-[#3F3D56] text-sm font-normal font-['Inter'] leading-tight tracking-tight mt-4">{service.desc}</p>
+              <div className="mt-4">
+                <span className="text-[#FE5F62] text-base font-normal font-['Inter'] tracking-tight">Explore</span>
+                <div className="w-3.5 h-px bg-[#FE5F62] mt-1" />
+              </div>
+            </div>
           </div>
         ))}
       </div>
