@@ -1,10 +1,10 @@
 import React from 'react'
 import Component1 from '../components/Component1'
 import Component2 from '../components/Component2'
-import Component10 from '../Components/Component10'
 import Component11 from '../preComponent/component11'
-import Component7 from '../Components/Component7'
-import Component8 from '../Components/Component8'
+import Component8 from '../components/Component8'
+import Component10 from '../components/Component10'
+import Component7 from '../components/Component7'
 
 const ServicesPage = () => {
   return (
