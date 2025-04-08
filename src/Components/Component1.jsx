@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 
-function Component1() {
+const Component1 = () => {
   return (
     <div className="bg-white mx-auto w-full px-6  md:px-20  min-h-screen">
       <div>

@@ -1,4 +1,4 @@
-function Component8() {
+const Component8 = () => {
     return (
         <>
             <div className="w-full h-auto bg-[#3F3D56] overflow-hidden p-6">

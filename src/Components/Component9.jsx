@@ -1,7 +1,7 @@
 import React from "react";
 import { FaPaw } from "react-icons/fa";
 
-function Component9() {
+const Component9 = () => {
   return (
     <div className="relative  flex flex-col md:flex-row justify-evenly items-center p-8 bg-white">
       {/* Paw Icons in Blank Spaces */}

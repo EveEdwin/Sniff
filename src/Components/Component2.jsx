@@ -2,7 +2,7 @@ import React from 'react';
 import { FaPaw } from 'react-icons/fa';
 import { IoPawOutline } from "react-icons/io5";
 
-function Component2() {
+const Component2 = () => {
   const services = [
     {
       title: 'Vet Consultation',

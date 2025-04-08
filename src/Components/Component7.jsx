@@ -1,4 +1,4 @@
-function Component7() {
+const Component7 = () => {
   return (
     <>
       <div className="w-full mx-auto px-6 py-10 bg-red-100 flex flex-col  gap-6 overflow-hidden">
