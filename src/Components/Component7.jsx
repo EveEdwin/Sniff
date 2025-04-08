@@ -1,7 +1,7 @@
 function Component7() {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto px-6 py-10 bg-red-100 flex flex-col justify-start items-start gap-6 overflow-hidden">
+      <div className="w-full mx-auto px-6 py-10 bg-red-100 flex flex-col  gap-6 overflow-hidden">
         <div className="w-full flex flex-col justify-start items-center gap-10">
           <div className="w-full text-center">
             <span className="text-Primary-Red text-4xl md:text-6xl font-bold tracking-wide transition-colors duration-300 hover:text-red-500">

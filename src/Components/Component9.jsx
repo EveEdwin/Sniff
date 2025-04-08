@@ -3,7 +3,7 @@ import { FaPaw } from "react-icons/fa";
 
 function Component9() {
   return (
-    <div className="relative flex flex-col md:flex-row justify-between items-center p-8 bg-white">
+    <div className="relative  flex flex-col md:flex-row justify-evenly items-center p-8 bg-white">
       {/* Paw Icons in Blank Spaces */}
       <FaPaw className="absolute top-4 left-4 text-gray-300 text-6xl opacity-20" />
       <FaPaw className="absolute bottom-4 right-4 text-gray-300 text-6xl opacity-20" />
@@ -15,7 +15,7 @@ function Component9() {
       <FaPaw className="absolute top-1/4 right-1/4 text-gray-300 text-6xl opacity-20" />
 
       {/* Images Aligned Side by Side with Glowing Effect */}
-      <div className="flex gap-4 mr-8">
+      <div className="flex gap-4 items-center justify-center ">
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-black via-white to-pink-200 rounded-xl blur-lg opacity-30"></div>
           <img
