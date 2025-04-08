@@ -3,6 +3,8 @@ import Component7 from "./Components/Component7";
 import Component8 from "./Components/Component8";
 import Component9 from "./Components/Component9";
 import Component10 from "./Components/Component10";
+import Component1 from "./Components/Component1";
+import Component2 from "./Components/Component2";
 
 import Component16 from "./preComponent/component16";
 import TestimonialSlider from "./preComponent/testominals";
@@ -15,7 +17,7 @@ import Component11 from "./preComponent/component11";
 
 
 function App() {
-  return (
+  return ( 
     <>
       <Component16 />
       <Component15 />
@@ -27,7 +29,6 @@ function App() {
       <Component10 />
       <Component7 />
       <Component8 />
-      {/* <Testimonials /> */}
     </>
   );
 }
