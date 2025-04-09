@@ -1,38 +1,45 @@
 import React from 'react';
 import { FaPaw } from 'react-icons/fa';
 import { IoPawOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const Component2 = () => {
   const services = [
     {
       title: 'Vet Consultation',
       desc: 'Get expert advice and personalized care from professional veterinarians, ensuring your pet’s well-being at every stage.',
-      status: 'Explore →'
+      status: 'Explore →',
+      route: '/services/vet-consultation'
     },
     {
       title: 'Pharmacy',
       desc: 'Convenient and reliable pet medication services with vet-approved prescriptions delivered right to your doorstep.',
-      status: 'Explore →'
+      status: 'Explore →',
+      route: '/services/pharmacy'
     },
     {
       title: 'Vaccination',
       desc: 'Keep your pet safe with essential vaccinations, protecting them from diseases and ensuring a long, healthy life.',
-      status: 'Explore →'
+      status: 'Explore →',
+      route: '/services/vaccination'
     },
     {
       title: 'Pet Registration',
       desc: 'Hassle-free registration to maintain your pet’s health records digitally for easy access anywhere, anytime.',
-      status: 'Explore →'
+      status: 'Explore →',
+      route: '/services/pet-registration'
     },
     {
       title: 'Diagnostics',
       desc: 'Advanced lab tests and screenings for accurate disease detection, early treatment, and better health management.',
-      status: 'Explore →'
+      status: 'Explore →',
+      route: '/services/diagnostics'
     },
     {
       title: 'Mating',
       desc: '(COMING SOON)',
-      status: 'Explore →'
+      status: 'Explore →',
+      route: '/services/mating'
     },
   ];
 
@@ -54,7 +61,7 @@ const Component2 = () => {
               </div>
             </div>
             <div className="w-full h-60 bg-[#FFFFFF] rounded-xl outline-[0.70px] outline-offset-[-0.70px] outline-[#FE5F62] overflow-hidden p-6 pt-10">
-              <h3 className="text-[#FE5F62] text-2xl md:text-3xl font-medium font-['Inter'] tracking-wide">{service.title}</h3>
+              <Link to={service.route} className="text-[#FE5F62] text-2xl md:text-3xl font-medium font-['Inter'] tracking-wide">{service.title}</Link>
               <p className="text-[#3F3D56] text-sm font-normal font-['Inter'] leading-tight tracking-tight mt-4">{service.desc}</p>
               <div className="mt-4">
                 <span className="text-[#FE5F62] text-base font-normal font-['Inter'] tracking-tight">Explore</span>
