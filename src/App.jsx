@@ -1,5 +1,6 @@
 // File: src/App.jsx
 // Importing React and the HomePage component
+import Test from "./components/test";
 import BookApointment from "./Pages/BookApointment";
 import HomePage from "./Pages/HomePage";
 import LearningPage from "./Pages/LearningPage";
@@ -22,8 +23,6 @@ function App() {
         <Route path="/tandc" element={<TandC />} />
         <Route path="/bookappointment" element={<BookApointment />} />
       </Routes>
-
-
     </>
   );
 }
