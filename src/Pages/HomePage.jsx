@@ -13,7 +13,6 @@ import Component9 from '../components/component9'
 const HomePage = () => {
   return (
     <div>
-      {/* <Component16 /> */}
       <Component15 />
       <Component14 />
       <Component9 />

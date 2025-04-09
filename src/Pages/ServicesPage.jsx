@@ -2,10 +2,10 @@ import React from 'react'
 import Component1 from '../components/component1'
 import Component2 from '../components/component2'
 import Component10 from '../components/component10'
+import Component11 from '../preComponent/component11'
 import Component7 from '../components/component7'
 import Component8 from '../components/component8'
-import Component11 from '../preComponent/component11'
-0
+
 const ServicesPage = () => {
   return (
     <div>
