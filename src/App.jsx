@@ -1,5 +1,14 @@
-// File: src/App.jsx
-// Importing React and the HomePage component
+
+// Import the necessary modules and components
+import Component7 from "./Components/Component7";
+import Component8 from "./Components/Component8";
+import Component9 from "./Components/Component9";
+import Component10 from "./Components/Component10";
+import Component1 from "./Components/Component1";
+import Component2 from "./Components/Component2";
+import Component3 from "./Components/Component3";
+import Component19 from "./Components/Component19";
+
 
 import BookApointment from "./Pages/BookApointment";
 import HomePage from "./Pages/HomePage";
