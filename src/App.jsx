@@ -5,6 +5,7 @@ import Component9 from "./Components/Component9";
 import Component10 from "./Components/Component10";
 import Component1 from "./Components/Component1";
 import Component2 from "./Components/Component2";
+import Component3 from "./Components/Component3";
 
 import Component16 from "./preComponent/component16";
 import TestimonialSlider from "./preComponent/testominals";
@@ -19,7 +20,7 @@ import Component11 from "./preComponent/component11";
 function App() {
   return ( 
     <>
-      <Component16 />
+      {/* <Component16 />
       <Component15 />
       <Component14 />
       <Component9 />
@@ -28,7 +29,8 @@ function App() {
       <Component13  />
       <Component10 />
       <Component7 />
-      <Component8 />
+      <Component8 /> */}
+      <Component3 />
     </>
   );
 }
