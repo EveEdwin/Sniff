@@ -6,20 +6,20 @@ import pawsvg from '../assets/paw.svg'
 
 const Component15 = () => {
     return (
-        <div className='flex items-center justify-evenly relative h-[80vh]'>
+        <div className='flex items-center gap-10 justify-evenly relative h-[80vh]'>
                 <img src={pawsvg} alt="pawsvg" className='absolute left-[30px] bottom-[40px] ' />
                 <img src={pawsvg} alt="pawsvg" className='absolute left-[90px] bottom-[80px] ' />
             <div className='relative '>
-                <img src={pawsvg} alt="pawsvg" className='absolute right-[11vw] top-[7vh] ' />
-                <img src={pawsvg} alt="pawsvg" className='absolute right-[100px] top-[15px] ' />
-                <img src={pawsvg} alt="pawsvg" className='absolute right-[100px] top-[15px] ' />
+                <img src={pawsvg} alt="pawsvg" className='absolute right-[4vw] top-[9vh] ' />
+                <img src={pawsvg} alt="pawsvg" className='absolute right-[0px] top-[15px] ' />
+                {/* <img src={pawsvg} alt="pawsvg" className='absolute right-[100px] top-[15px] ' /> */}
                 {/* <img src={pawsvg} alt="pawsvg" className='absolute right-[100px] top-[45px] ' /> */}
 
-                <div className="text-justify justify-start mb-2 ">
-                    <span className="text-[#3F3D56] text-6xl font-semibold font-['Inter'] tracking-wider">Compassionate </span>
-                    <span className="text-[#FE5F62] text-6xl font-semibold font-['Inter'] tracking-wider">Care <br /></span>
-                    <span className="text-[#3F3D56] text-6xl font-semibold font-['Inter'] tracking-wider">for </span>
-                    <span className="text-[#FE5F62] text-6xl font-semibold font-['Inter'] tracking-wider">Every Paw!</span>
+                <div className="text-justify justify-start mb-12 ">
+                    <span className="text-[#3F3D56] text-7xl font-semibold font-['Inter'] tracking-wider">Compassionate </span>
+                    <span className="text-[#FE5F62] text-7xl font-semibold font-['Inter'] tracking-wider">Care <br /></span>
+                    <span className="text-[#3F3D56] text-7xl font-semibold font-['Inter'] tracking-wider">for </span>
+                    <span className="text-[#FE5F62] text-7xl font-semibold font-['Inter'] tracking-wider">Every Paw!</span>
                 </div>
                 <div className="w-[53dvw] mb-2 text-justify justify-start text-black text-xl font-normal font-['Inter'] leading-loose tracking-tight">
                     At Sniffi, we believe that every pet deserves the best care, love, and attention. Our team of experienced veterinarians and compassionate staff are dedicated to providing high-quality medical care, wellness services, and emergency treatments for your beloved pets.

@@ -1,3 +1,4 @@
+
 // Import the necessary modules and components
 import Component7 from "./Components/Component7";
 import Component8 from "./Components/Component8";
@@ -8,31 +9,34 @@ import Component2 from "./Components/Component2";
 import Component3 from "./Components/Component3";
 import Component19 from "./Components/Component19";
 
-import Component16 from "./preComponent/component16";
-import TestimonialSlider from "./preComponent/testominals";
-import Component15 from "./preComponent/component15";
-import Component14 from "./preComponent/component14";
-import Component6 from "./preComponent/component6";
-import Component13 from "./preComponent/component13";
-import Component11 from "./preComponent/component11";
 
+import BookApointment from "./Pages/BookApointment";
+import HomePage from "./Pages/HomePage";
+import LearningPage from "./Pages/LearningPage";
+import ServicesPage from "./Pages/ServicesPage";
+import SocialPage from "./Pages/SocialPage";
+import TandC from "./Pages/TandC";
+import Component16 from "./preComponent/component16";
+import { Routes, Route } from 'react-router-dom'
+
+import routes from "./routes/service";
 
 
 function App() {
-  return ( 
+  return (
     <>
-      {/* <Component16 />
-      <Component15 />
-      <Component14 />
-      <Component9 />
-      <Component6 />
-      <Component11 />
-      <Component13  />
-      <Component10 />
-      <Component7 />
-      <Component8 /> */}
-      <Component3 />
-      <Component19 />
+      <Component16 />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/learning" element={<LearningPage />} />
+        <Route path="/social" element={<SocialPage />} />
+        <Route path="/tandc" element={<TandC />} />
+        <Route path="/bookappointment" element={<BookApointment />} />
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element} />
+        ))}
+      </Routes>
     </>
   );
 }
