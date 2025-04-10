@@ -1,7 +1,7 @@
 import React from "react";
 import circlepaw from "../assets/circlepaw.svg";
 
-function Component4() {
+function Component19() {
   const dogAges = ["Puppy", "Adult", "Senior"];
   const catAges = ["Puppy", "Adult", "Senior"];
 
@@ -64,4 +64,4 @@ function Component4() {
   );
 }
 
-export default Component4;
+export default Component19;
