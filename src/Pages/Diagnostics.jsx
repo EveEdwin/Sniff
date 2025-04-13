@@ -1,14 +1,14 @@
 import React from 'react';
-import Component4 from '../preComponent/Component4';
-import Component17 from '../components/Component17';
-import Component12 from '../components/Component12';
-import Component11 from '../preComponent/Component11';
-import Component7 from '../components/Component7';
-import Component8 from '../components/Component8';
-import Component_10 from '../components/Component_10';
-import Component10 from '../components/Component10';
-import Component19 from '../components/Component19';
-import Component3 from '../components/Component3';
+import Component4 from '../preComponent/C13';
+import Component17 from '../Components/C11';
+import Component12 from '../Components/C10';
+import Component11 from '../preComponent/C15';
+import Component7 from '../Components/C5';
+import Component8 from '../Components/C6';
+import Component_10 from '../Components/C1';
+import Component10 from '../Components/C8';
+import Component19 from '../Components/C12';
+import Component3 from '../Components/C4';
 
 const Diagnostics = () => {
   return (

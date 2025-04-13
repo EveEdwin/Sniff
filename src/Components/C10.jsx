@@ -17,7 +17,7 @@ const Component12 = () => {
             {/* Cards container */}
             <div className="flex flex-col md:flex-row justify-center md:justify-start items-center gap-6 md:ml-[103px] overflow-x-auto">
                 {/* Card 1 */}
-                <div className="w-full max-w-[384px] pb-3 bg-[#FFFFFF] rounded-[10px] shadow-[0px_0px_6px_0px_rgba(0,0,0,0.25)] flex flex-col justify-start items-center gap-5 overflow-hidden">
+                <div className="w-full max-w-[384px] pb-3 bg-[#FFFFFF] rounded-[10px] shadow-[0px_0px_6px_0px_rgba(0,0,0,0.25)] flex flex-col justify-start items-center gap-5 overflow-hidden sm:w-[90%]">
                     <div className="self-stretch px-4 md:px-32 py-4 bg-[#FE5F62] flex justify-center items-center gap-2">
                         <div className="text-center text-[#FFFFFF] text-md md:text-xl font-semibold font-['Inter'] tracking-wide">I Care a Lot</div>
                     </div>
@@ -28,7 +28,7 @@ const Component12 = () => {
                 </div>
                 
                 {/* Card 2 */}
-                <div className="w-full max-w-[384px] pb-3 bg-[#FFFFFF] rounded-[10px] shadow-[0px_0px_6px_0px_rgba(0,0,0,0.25)] flex flex-col justify-start items-center gap-5 overflow-hidden">
+                <div className="w-full max-w-[384px] pb-3 bg-[#FFFFFF] rounded-[10px] shadow-[0px_0px_6px_0px_rgba(0,0,0,0.25)] flex flex-col justify-start items-center gap-5 overflow-hidden sm:w-[90%]">
                     <div className="self-stretch px-4 md:px-32 py-4 bg-[#FE5F62] flex justify-center items-center gap-2">
                         <div className="text-center text-[#FFFFFF] text-md md:text-xl font-semibold font-['Inter'] tracking-wide">I am Panicking</div>
                     </div>
@@ -39,7 +39,7 @@ const Component12 = () => {
                 </div>
                 
                 {/* Card 3 */}
-                <div className="w-full max-w-[384px] pb-3 bg-[#FFFFFF] rounded-[10px] shadow-[0px_0px_6px_0px_rgba(0,0,0,0.25)] flex flex-col justify-start items-center gap-5 overflow-hidden">
+                <div className="w-full max-w-[384px] pb-3 bg-[#FFFFFF] rounded-[10px] shadow-[0px_0px_6px_0px_rgba(0,0,0,0.25)] flex flex-col justify-start items-center gap-5 overflow-hidden sm:w-[90%]">
                     <div className="self-stretch px-4 md:px-32 py-4 bg-[#FE5F62] flex justify-center items-center gap-2">
                         <div className="text-center text-[#FFFFFF] text-md md:text-xl font-semibold font-['Inter'] tracking-wide">Being Precautionary</div>
                     </div>
