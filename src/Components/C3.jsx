@@ -46,7 +46,7 @@ const Component2 = () => {
   return (
     <div className="w-full max-w-[1440px] mx-auto py-12 px-4 md:px-8 bg-red-200/50 overflow-hidden">
       <div className="text-center mb-12 md:mb-16">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold font-['Inter'] tracking-wider">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold  tracking-wider">
           <span className="text-[#3F3D56]">We Provide </span>
           <span className="text-[#FE5F62]">Best Services</span>
         </h2>
@@ -61,10 +61,10 @@ const Component2 = () => {
               </div>
             </div>
             <div className="w-full h-60 bg-[#FFFFFF] rounded-xl outline-[0.70px] outline-offset-[-0.70px] outline-[#FE5F62] overflow-hidden p-6 pt-10">
-              <Link to={service.route} className="text-[#FE5F62] text-2xl md:text-3xl font-medium font-['Inter'] tracking-wide">{service.title}</Link>
-              <p className="text-[#3F3D56] text-sm font-normal font-['Inter'] leading-tight tracking-tight mt-4">{service.desc}</p>
+              <Link to={service.route} className="text-[#FE5F62] text-2xl md:text-3xl font-medium  tracking-wide">{service.title}</Link>
+              <p className="text-[#3F3D56] text-sm font-normal  leading-tight tracking-tight mt-4">{service.desc}</p>
               <div className="mt-4">
-                <span className="text-[#FE5F62] text-base font-normal font-['Inter'] tracking-tight">Explore</span>
+                <span className="text-[#FE5F62] text-base font-normal  tracking-tight">Explore</span>
                 <div className="w-3.5 h-px bg-[#FE5F62] mt-1" />
               </div>
             </div>

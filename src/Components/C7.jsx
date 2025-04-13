@@ -35,37 +35,37 @@ const Component9 = () => {
       {/* Text Content */}
       <div className="max-w-xl text-left">
         <h2 className="mb-6">
-          <span className="text-[#3F3D56] text-6xl font-semibold font-['Inter'] tracking-wider">Why </span>
-          <span className="text-[#FE5F62] text-6xl font-semibold font-['Inter'] tracking-wider">Choose</span>
-          <span className="text-[#3F3D56] text-6xl font-semibold font-['Inter'] tracking-wider"> Us?</span>
+          <span className="text-[#3F3D56] text-6xl font-semibold tracking-wider">Why </span>
+          <span className="text-[#FE5F62] text-6xl font-semibold tracking-wider">Choose</span>
+          <span className="text-[#3F3D56] text-6xl font-semibold tracking-wider"> Us?</span>
         </h2>
 
         <div className="space-y-4">
-          <p className="text-black text-base font-['Inter'] leading-7 flex items-start">
+          <p className="text-black text-base leading-7 flex items-start">
             <span className="text-pink-500 font-bold mr-2">✓</span>
             <span>
               <strong className="font-bold">Expert Care</strong> – Our skilled veterinarians and support staff ensure your pet receives the best medical attention.
             </span>
           </p>
-          <p className="text-black text-base font-['Inter'] leading-7 flex items-start">
+          <p className="text-black text-base leading-7 flex items-start">
             <span className="text-pink-500 font-bold mr-2">✓</span>
             <span>
               <strong className="font-bold">Modern Facilities</strong> – Equipped with state-of-the-art technology for accurate diagnoses and treatments.
             </span>
           </p>
-          <p className="text-black text-base font-['Inter'] leading-7 flex items-start">
+          <p className="text-black text-base leading-7 flex items-start">
             <span className="text-pink-500 font-bold mr-2">✓</span>
             <span>
               <strong className="font-bold">Emergency Services</strong> – Available when you need us the most, providing immediate care in critical situations.
             </span>
           </p>
-          <p className="text-black text-base font-['Inter'] leading-7 flex items-start">
+          <p className="text-black text-base leading-7 flex items-start">
             <span className="text-pink-500 font-bold mr-2">✓</span>
             <span>
               <strong className="font-bold">Compassionate Approach</strong> – We treat every pet like family, ensuring a caring and comfortable experience.
             </span>
           </p>
-          <p className="text-black text-base font-['Inter'] leading-7 flex items-start">
+          <p className="text-black tex leading-7 flex items-start">
             <span className="text-pink-500 font-bold mr-2">✓</span>
             <span>
               <strong className="font-bold">Convenient Booking</strong> – Easy online appointment scheduling for hassle-free visits.
