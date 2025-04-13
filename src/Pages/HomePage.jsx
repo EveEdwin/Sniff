@@ -1,14 +1,14 @@
 import React from 'react'
-import Component16 from '../preComponent/component16'
-import Component15 from '../preComponent/component15'
-import Component14 from '../preComponent/component14'
-import Component6 from '../preComponent/component6'
-import Component11 from '../preComponent/component11'
-import Component13 from '../preComponent/component13'
+import Component16 from '../preComponent/Component16'
+import Component15 from '../preComponent/Component15'
+import Component14 from '../preComponent/Component14'
+import Component6 from '../preComponent/Component6'
+import Component11 from '../preComponent/Component11'
+import Component13 from '../preComponent/Component13'
 import Component10 from '../components/Component10'
-import Component7 from '../components/component7'
-import Component8 from '../components/component8'
-import Component9 from '../components/component9'
+import Component7 from '../components/Component7'
+import Component8 from '../components/Component8'
+import Component9 from '../components/Component9'
 
 const HomePage = () => {
   return (

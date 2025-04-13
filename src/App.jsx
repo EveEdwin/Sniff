@@ -5,7 +5,7 @@ import LearningPage from "./Pages/LearningPage";
 import ServicesPage from "./Pages/ServicesPage";
 import SocialPage from "./Pages/SocialPage";
 import TandC from "./Pages/TandC";
-import Component16 from "./preComponent/component16";
+import Component16 from "./preComponent/Component16";
 import { Routes, Route } from 'react-router-dom'
 
 import routes from "./routes/service";
