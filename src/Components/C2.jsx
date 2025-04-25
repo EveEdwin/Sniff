@@ -20,25 +20,25 @@ const Component1 = () => {
             </h2>
 
             <ul className="mt-6 space-y-4 text-base md:text-2xl text-black">
-              <li className="flex items-start gap-3 hover:scale-105 transition-transform duration-300">
+              <li className="flex items-start gap-3 transition-colors duration-300">
                 <FaCheckCircle className="text-[#FE5F62] mt-1" />
                 <span className="hover:text-[#FE5F62] transition-colors duration-300">
                   <strong>Comfort & Less Stress</strong> – Pets feel more relaxed in their familiar environment, reducing anxiety and fear.
                 </span>
               </li>
-              <li className="flex items-start gap-3 hover:scale-105 transition-transform duration-300">
+              <li className="flex items-start gap-3 transition-colors duration-300">
                 <FaCheckCircle className="text-[#FE5F62] mt-1" />
                 <span className="hover:text-[#FE5F62] transition-colors duration-300">
                   <strong>Convenience & Time-Saving</strong> – No more hectic clinic visits or waiting in long queues—care comes to you!
                 </span>
               </li>
-              <li className="flex items-start gap-3 hover:scale-105 transition-transform duration-300">
+              <li className="flex items-start gap-3 transition-colors duration-300">
                 <FaCheckCircle className="text-[#FE5F62] mt-1" />
                 <span className="hover:text-[#FE5F62] transition-colors duration-300">
                   <strong>One-on-One Attention</strong> – Our vets provide personalized consultations and thorough check-ups without distractions.
                 </span>
               </li>
-              <li className="flex items-start gap-3 hover:scale-105 transition-transform duration-300">
+              <li className="flex items-start gap-3 transition-colors duration-300">
                 <FaCheckCircle className="text-[#FE5F62] mt-1" />
                 <span className="hover:text-[#FE5F62] transition-colors duration-300">
                   <strong>Safe & Hygienic</strong> – Minimize exposure to contagious illnesses and ensure a cleaner, safer experience.
@@ -48,7 +48,7 @@ const Component1 = () => {
           </section>
           <div className=" flex justify-center items-centerml-6 mt-10 self-end">
             <img
-              className="h-full object-cover rounded-xl   hover:scale-105 transition-transform duration-300"
+              className="h-full object-cover rounded-xl transition-colors duration-300"
               src="/women.jpg"
               alt="Vet with dog"
             />

@@ -21,7 +21,7 @@ function Component3() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`bg-red-200 text-gray-800 rounded-lg py-6 sm:py-8 lg:py-10 px-4 sm:px-6 flex flex-col items-center shadow-sm transition-transform transform hover:bg-red-300 hover:scale-105 ${
+              className={`bg-red-200 text-gray-800 rounded-lg py-6 sm:py-8 lg:py-10 px-4 sm:px-6 flex flex-col items-center shadow-sm transition-colors hover:bg-red-300 ${
                 index === 4 ? "sm:col-start-2 sm:row-start-2" : index === 5 ? "sm:col-start-3 sm:row-start-2" : ""
               }`}
             >

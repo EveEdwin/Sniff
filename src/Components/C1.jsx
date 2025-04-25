@@ -14,13 +14,13 @@ const Component_10 = () => {
                 <img
                     src="/app.jpg"
                     alt=""
-                    className="w-[200px] lg:w-[300px] h-auto rounded-lg mx-auto lg:mx-0 transition-transform duration-300 hover:scale-105"
+                    className="w-[200px] lg:w-[300px] h-auto rounded-lg mx-auto lg:mx-0 transition-colors duration-300"
                 />
             </div>
             <img
                 src={mobile}
                 alt="Mobile SVG"
-                className="w-[300px] lg:w-[500px] h-auto mb-6 lg:mb-0 lg:mr-10 transition-transform duration-300 hover:scale-105"
+                className="w-[300px] lg:w-[500px] h-auto mb-6 lg:mb-0 lg:mr-10 transition-colors duration-300"
             />
         </div>
     );

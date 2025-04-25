@@ -1,5 +1,8 @@
 import React from "react";
 import { FaPaw } from "react-icons/fa";
+//  import dog1 from "../assets/dog1.svgg";
+import dogsvg from '../assets/dog1.svg'
+import dogsvg1 from '../assets/dog2.svg'
 
 const Component9 = () => {
   return (
@@ -19,14 +22,14 @@ const Component9 = () => {
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-black via-white to-pink-200 rounded-xl blur-lg opacity-30"></div>
           <img
-            src="https://s3-alpha-sig.figma.com/img/3f1b/2f89/183c51bb6f0fe5f206deb45d14a97db1?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=qH8uexP23EaO08qxIA1I-tEY9Nf7CqFxkXL~O0-FTkKMnhLXj4nVnD1muHwSw~iU-eaGvhp8bdCjLd5lDwybk3VPhtO~dMK-HJJkFzGFWH8v~5tIfMHqRWUUESgsCQU18OC7ng78O57e5DKexnb6akhOilHQ8XDPNJ5Gu6vSBB8qvRHkyBSN1AbdLk~Qfpsg4EIJcb2foN7jVIEMj-3qC2Zw9EaUUnKIWvmv8R-TvKsddu9gAwdY1VQYREkFG7MFKPzkmXNYe9KEVI~5QJur9j9RrJO50LYf8fYjvYTB0yCKjvkEsZLTue3WjfOpGg3lJcKgVWOGAWVhGU2dkQJ~1g__"
-            className="rounded-xl w-44 h-60 object-cover shadow-lg rotate-[-10deg] transition-transform duration-300 hover:scale-105"
+            src={dogsvg}
+            className="rounded-xlc w-44 h-60 object- shadow-lg rotate-[-10deg] transition-transform duration-300 hover:scale-105"
           />
         </div>
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-pink-200 via-white to-black rounded-xl blur-lg opacity-30"></div>
           <img
-            src="https://s3-alpha-sig.figma.com/img/a04a/fcd0/af267ae5ee8022b1008c1d42b0ac6cd6?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=I4IVrrdCWi-lWFBExyqyG~Y8VNIEqb14-CKk6JgfLtS6lgDPURho6jHICfzR8HK74PcqzqAGM6HKEcUAhUptsWmXbQioTdZ6mmWlMMSdussE~1UAqNWSAB6gKfRjMOUPKV2wbbWDkC33Ntk9rFee7FK2778w5oWPXNnkDMo5CuAA59~BgF-~a~XpNC-KIThk-0K5oRZS5ZJiCT0Z9rDv81VWTMRwYF3TxuskixAp8-K7b-ZwC8THxPQWpqZ7eRRRSvXkoZw2m6yw2UhixeLXSQr3vUY2glrwyVNWrwX0qvEgzCYFm1pXNJQ63mh-~ztk6Nd2WK8Rfhdbn4qFA26QhA__"
+            src={dogsvg1}
             className="rounded-xl w-44 h-60 object-cover shadow-lg rotate-[10deg] transition-transform duration-300 hover:scale-105"
           />
         </div>

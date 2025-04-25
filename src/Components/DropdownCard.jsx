@@ -1,4 +1,3 @@
-
 const DropdownCard = () => (
     <div className="border rounded-lg p-4 shadow-sm w-full">
       <p className="font-semibold text-[#FE5F62]">General Health</p>
@@ -13,4 +12,3 @@ const DropdownCard = () => (
   );
 
 export default DropdownCard;
-  

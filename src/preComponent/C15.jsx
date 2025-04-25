@@ -38,7 +38,7 @@ const Component11 = () => {
                         key={index}
                         className={`transform ${t.rotate} h-auto min-h-[250px] md:h-[30vh] flex justify-center items-center bg-[#FE5F62] rounded-[20px] md:rounded-[30px] shadow-lg p-4 md:p-6`}
                     >
-                        <div className={`bg-white p-4 md:p-6 transform ${t.antirotate} rounded-[20px] md:rounded-[30px] z-10 shadow-xl relative overflow-hidden transition-all duration-300 w-full`}>
+                        <div className={`bg-white p-4 md:p-6 transform ${t.antirotate} rounded-[20px] md:rounded-[30px] z-10 shadow-xl relative overflow-hidden transition-colors duration-300 w-full`}>
                             <div className="absolute inset-0 flex justify-center items-center w-full h-full bg-[url('/assets/shape.svg')] bg-no-repeat bg-cover opacity-10 pointer-events-none" />
                             <div className="flex justify-center">
                                 <img

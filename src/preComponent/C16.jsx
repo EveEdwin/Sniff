@@ -34,7 +34,7 @@ const Component13 = () => {
         {stats.map((item, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl shadow-md p-4 sm:p-5 md:p-6 flex flex-col items-center gap-1 sm:gap-2 transform transition-transform duration-300 hover:scale-105"
+            className="bg-white rounded-xl shadow-md p-4 sm:p-5 md:p-6 flex flex-col items-center gap-1 sm:gap-2 transition-shadow duration-300 hover:shadow-lg"
           >
             <div className="text-2xl sm:text-3xl bg-pink-100 p-2 sm:p-3 rounded-full">{item.icon}</div>
             <h3 className="text-3xl sm:text-4xl font-bold text-pink-500 mt-2">{item.value}</h3>

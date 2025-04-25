@@ -25,7 +25,7 @@ function Component19() {
             {dogAges.map((age, idx) => (
               <div
                 key={idx}
-                className={`bg-white border border-red-300 rounded-lg px-6 py-4 w-full sm:w-48 flex flex-col items-center shadow-sm transition-transform duration-300 hover:scale-105 ${
+                className={`bg-white border border-red-300 rounded-lg px-6 py-4 w-full sm:w-48 flex flex-col items-center shadow-sm transition-shadow duration-300 hover:shadow-md ${
                   idx === 2 ? "sm:col-span-2 mx-auto" : ""
                 }`}
               >
@@ -49,7 +49,7 @@ function Component19() {
             {catAges.map((age, idx) => (
               <div
                 key={idx}
-                className={`bg-white border border-red-300 rounded-lg px-6 py-4 w-full sm:w-48 flex flex-col items-center shadow-sm transition-transform duration-300 hover:scale-105 ${
+                className={`bg-white border border-red-300 rounded-lg px-6 py-4 w-full sm:w-48 flex flex-col items-center shadow-sm transition-shadow duration-300 hover:shadow-md ${
                   idx === 2 ? "sm:col-span-2 mx-auto" : ""
                 }`}
               >
