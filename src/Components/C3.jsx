@@ -12,8 +12,8 @@ const Component2 = () => {
       route: '/services/vet-consultation'
     },
     {
-      title: 'Wellness',
-      desc: 'Convenient and reliable pet medication services with vet-approved prescriptions delivered right to your doorstep.',
+      title: 'Wellness Exam',
+      desc: 'At Sniffi, wellness means proactive care. We offer personalized wellness plans focused on preventive check-ups, nutrition, and early detection, making it easier to keep your pets healthy, happy, and thriving every day.',
       status: 'Explore →',
       route: '/services/wellness'
     },
