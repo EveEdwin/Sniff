@@ -2,7 +2,7 @@ import mobile from "../assets/mobile.svg";
 
 const Component10 = () => {
     return (
-        <div className="flex flex-col lg:flex-row justify-evenly space-x-0 mt-10 items-center">
+        <div className="flex flex-col lg:flex-row justify-evenly space-x-0 mt-5 items-center">
             <img
                 src={mobile}
                 alt="Mobile SVG"

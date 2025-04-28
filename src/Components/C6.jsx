@@ -5,7 +5,7 @@ const Component8 = () => {
                 {/* Header Section */}
                 <div className="flex flex-col md:flex-row justify-between items-center pl-4">
                     <div className="flex items-center space-x-4">
-                        <div className="w-6 h-6 bg-[#FE5F62] rounded-full"></div>
+                        {/* <div className="w-6 h-6 bg-[#FE5F62] rounded-full"></div> */}
                         <div className="text-4xl font-extrabold leading-normal hover:text-[#FE5F62] transition-colors cursor-pointer">
                             <span className="text-white">Sni</span>
                             <span className="text-[#FE5F62]">ffi</span>
