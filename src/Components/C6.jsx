@@ -5,9 +5,9 @@ const Footer = () => {
                 {/* Header Section */}
                 <div className="flex flex-col md:flex-row justify-between items-center mb-10">
                     <div className="flex items-center space-x-4 mb-6 md:mb-0">
-                        <div className="w-8 h-8 bg-[#FE5F62] rounded-full flex items-center justify-center">
+                        {/* <div className="w-8 h-8 bg-[#FE5F62] rounded-full flex items-center justify-center">
                             <span className="sr-only">Sniffi logo</span>
-                        </div>
+                        </div> */}
                         <div className="text-3xl sm:text-4xl font-extrabold hover:text-[#FE5F62] transition-colors duration-300 cursor-pointer">
                             <span className="text-white">Sni</span>
                             <span className="text-[#FE5F62]">ffi</span>

@@ -34,7 +34,7 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 {/* Logo */}
                 <Link to="/" className="flex items-center hover:opacity-90 transition-opacity">
-                    <div className="w-6 h-6 md:w-7 md:h-7 bg-[#FE5F62] rounded-full mr-2 flex-shrink-0" />
+                    {/* <div className="w-6 h-6 md:w-7 md:h-7 bg-[#FE5F62] rounded-full mr-2 flex-shrink-0" /> */}
                     <div className="flex justify-start">
                         <span className="text-[#3F3D56] text-3xl md:text-4xl font-extrabold leading-7">Sni</span>
                         <span className="text-[#FE5F62] text-3xl md:text-4xl font-extrabold leading-7">ffi</span>
