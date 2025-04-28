@@ -12,10 +12,10 @@ const Component2 = () => {
       route: '/services/vet-consultation'
     },
     {
-      title: 'Pharmacy',
+      title: 'Wellness',
       desc: 'Convenient and reliable pet medication services with vet-approved prescriptions delivered right to your doorstep.',
       status: 'Explore →',
-      route: '/services/pharmacy'
+      route: '/services/wellness'
     },
     {
       title: 'Vaccination',
