@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
     return (
         <footer className="w-full bg-[#3F3D56] text-white">
@@ -65,36 +67,36 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-3">
-                            <li><a href="#" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+                            <li><Link to='/' className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                                 Home
-                            </a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+                            </Link></li>
+                            <li><Link to='/services' className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                                 Services
-                            </a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+                            </Link></li>
+                            <li><Link to='/learning' className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                                 Learning
-                            </a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+                            </Link></li>
+                            <li><Link to='/social' className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                                 Socials
-                            </a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+                            </Link></li>
+                            <li><Link href="#" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                                 Contact Us
-                            </a></li>
+                            </Link></li>
                         </ul>
                     </div>
 
@@ -194,7 +196,7 @@ const Footer = () => {
                         </p>
                         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-300">
                             <a href="#" className="hover:text-[#FE5F62] transition-colors duration-300">Privacy Policy</a>
-                            <a href="#" className="hover:text-[#FE5F62] transition-colors duration-300">Terms & Conditions</a>
+                            <Link to="/tandc" className="hover:text-[#FE5F62] transition-colors duration-300">Terms & Conditions</Link>
                             <a href="#" className="hover:text-[#FE5F62] transition-colors duration-300">Cookie Policy</a>
                             <a href="#" className="hover:text-[#FE5F62] transition-colors duration-300">Sitemap</a>
                         </div>
