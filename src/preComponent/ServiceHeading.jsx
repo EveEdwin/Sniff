@@ -2,7 +2,7 @@ import React from 'react';
 
 const ServiceHeading = ({ headingParts, contentParts, imageSrc, imageAlt }) => {
     return (
-        <div className="flex flex-col items-center m-auto mt-10 px-4">
+        <div className="flex flex-col items-center m-auto mt-10 px-4 mb-16">
             <div>
                 <div className="md:text-left w-full md:w-[881px]">
                     {headingParts.map((part, index) => (
