@@ -22,14 +22,14 @@ const Component9 = () => {
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-black via-white to-pink-200 rounded-xl blur-lg opacity-30"></div>
           <img
-            src={dogsvg}
-            className="rounded-xlc w-44 h-60 object- shadow-lg rotate-[-10deg] transition-transform duration-300 hover:scale-105"
+            src="/doc3.jpeg"
+            className="rounded-xl w-44 h-60 object-cover shadow-lg rotate-[-10deg] transition-transform duration-300 hover:scale-105"
           />
         </div>
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-pink-200 via-white to-black rounded-xl blur-lg opacity-30"></div>
           <img
-            src={dogsvg1}
+            src="/doc2.jpeg"
             className="rounded-xl w-44 h-60 object-cover shadow-lg rotate-[10deg] transition-transform duration-300 hover:scale-105"
           />
         </div>
