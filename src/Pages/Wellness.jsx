@@ -87,7 +87,7 @@ imageAlt="Dog in Diagnostics"
     ]}
 />
 
-      <Component11 />
+      {/* <Component11 /> */}
       <Component7 />
       <Component8 />
 

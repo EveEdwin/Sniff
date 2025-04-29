@@ -41,7 +41,7 @@ const Diagnostics = () => {
         <Component3 />
         <Component19 />
         <Component_10 />
-        <Component11 />
+        {/* <Component11 /> */}
         <Component7 />
         <Component8 />
     </div>

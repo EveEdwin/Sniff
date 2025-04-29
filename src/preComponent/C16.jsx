@@ -26,7 +26,7 @@ const stats = [
 
 const Component13 = () => {
   return (
-    <section className="w-full overflow-hidden bg-[#FFDADA] py-8 sm:py-12 md:py-16 relative px-4">
+    <section className="w-full overflow-hidden bg-[#FFDADA] py-8 sm:py-12 md:py-16 relative px-4 mt-16">
       {/* Decorative background shape if needed */}
       {/* You can also use an SVG as background if you have one */}
 

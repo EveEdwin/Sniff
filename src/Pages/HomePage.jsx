@@ -18,7 +18,7 @@ const HomePage = () => {
       <Component14 />
       <Component9 />
       <Component6 />
-      <Component11 />
+      {/* <Component11 /> */}
       <Component13 />
       <Component10 />
       <Component7 />
