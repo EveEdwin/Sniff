@@ -61,13 +61,14 @@ const Navbar = () => {
                 </div>
 
                 {/* Book Appointment Button - Always visible */}
-                <NavLink 
-                    to="/bookappointment"
+                <a 
+                    href="https://wa.me/919175129919" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
                     className="hidden md:flex px-5 py-2 lg:px-7 lg:py-2.5 bg-[#FE5F62] hover:bg-[#e45457] rounded-md transition-all duration-300 text-white font-medium tracking-tight shadow-sm hover:shadow-md"
                 >
                     Book Appointment
-                </NavLink>
-                
+                </a>
                 {/* Mobile Menu Button */}
                 <button 
                     className="md:hidden text-[#3F3D56] p-2 focus:outline-none"
@@ -103,9 +104,9 @@ const Navbar = () => {
                         <div className="text-lg font-medium text-center">TnC</div>
                     </NavLink>
                     <div className="pt-2 pb-1">
-                        <NavLink to="/bookappointment" className="mx-auto block w-[80%] py-2.5 bg-[#FE5F62] hover:bg-[#e45457] text-center rounded-md transition-colors">
+                        <a href="https://wa.me/919175129919" target="_blank" rel="noopener noreferrer" className="mx-auto block w-[80%] py-2.5 bg-[#FE5F62] hover:bg-[#e45457] text-center rounded-md transition-colors">
                             <div className="text-white text-lg font-medium">Book Appointment</div>
-                        </NavLink>
+                        </a>
                     </div>
                 </div>
             </div>
