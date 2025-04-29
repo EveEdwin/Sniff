@@ -48,7 +48,7 @@ const Component7 = () => {
 </svg>
                   </div>
                   <div className="w-28 md:w-32 text-center text-Dark-Primary text-lg md:text-xl font-semibold leading-loose tracking-normal">
-                    What's App
+                    WhatsApp
                   </div>
                   <div className="text-center text-Dark-Primary text-xs md:text-sm font-normal uppercase tracking-normal truncate">
                   +91-9175129919
