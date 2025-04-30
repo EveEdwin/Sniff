@@ -7,7 +7,7 @@ import SocialPage from "./Pages/SocialPage";
 import TandC from "./Pages/TandC";
 import Component16 from "./preComponent/C19";
 import { Routes, Route } from 'react-router-dom'
-
+import ThankYouPage from "./Pages/ThankYouPage"
 import routes from "./routes/service";
 
 
@@ -21,6 +21,7 @@ function App() {
         <Route path="/learning" element={<LearningPage />} />
         <Route path="/social" element={<SocialPage />} />
         <Route path="/tandc" element={<TandC />} />
+        <Route path="/thank-you" element={<ThankYouPage />} />
         <Route path="/bookappointment" element={<BookApointment />} />
         {routes.map((route, index) => (
           <Route key={index} path={route.path} element={route.element} />

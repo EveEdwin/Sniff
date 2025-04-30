@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaPaw, FaCalendarAlt, FaClock, FaUser, FaDog, FaPhoneAlt, FaEnvelope, FaNotesMedical } from 'react-icons/fa';
 
 const BookApointment = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     petName: '',
     petType: 'dog',
@@ -27,24 +29,8 @@ const BookApointment = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Appointment Data:', formData);
-    setSubmitted(true);
-    // Reset form after submission
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        petName: '',
-        petType: 'dog',
-        ownerName: '',
-        email: '',
-        phone: '',
-        date: '',
-        time: '',
-        service: 'checkup',
-        notes: '',
-        agreeToTerms: false
-      });
-    }, 3000);
+    localStorage.setItem('appointmentData', JSON.stringify(formData));  // Store form data in localStorage
+    navigate('/thank-you');  // Redirect to the Thank You page
   };
 
   const services = [

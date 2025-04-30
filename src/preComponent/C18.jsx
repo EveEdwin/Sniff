@@ -7,7 +7,7 @@ import pawsvg from '../assets/paw.svg'
 
 const C18 = () => {
     return (
-        <div className='flex flex-col md:flex-row items-center gap-8 md:gap-10 justify-center md:justify-evenly relative min-h-[80vh] px-2 sm:px-4 md:px-8 lg:px-12 py-8 sm:py-12 overflow-hidden'>
+        <div className='flex flex-col md:flex-row items-center gap-8 md:gap-10 justify-center md:justify-evenly relative min-h-[90vh] px-2 sm:px-4 md:px-8 lg:px-12 py-8 sm:py-12 overflow-hidden'>
             {/* Decorative paw elements - made responsive */}
             <img src={pawsvg} alt="pawsvg" className='hidden sm:block absolute left-[2%] bottom-[6%] w-6 sm:w-8 md:w-10 opacity-70 animate-pulse z-0' />
             <img src={pawsvg} alt="pawsvg" className='hidden sm:block absolute left-[8%] bottom-[16%] w-5 sm:w-6 md:w-8 opacity-70 animate-pulse z-0' style={{animationDelay: '0.5s'}} />

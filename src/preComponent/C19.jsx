@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { FaPaw } from 'react-icons/fa'
+
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,14 +63,28 @@ const Navbar = () => {
                 </div>
 
                 {/* Book Appointment Button - Always visible */}
-                <a 
-                    href="https://wa.me/919175129919" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="hidden md:flex px-5 py-2 lg:px-7 lg:py-2.5 bg-[#FE5F62] hover:bg-[#e45457] rounded-md transition-all duration-300 text-white font-medium tracking-tight shadow-sm hover:shadow-md"
-                >
+                <Link to="/bookappointment" className="
+                    inline-flex
+                    items-center
+                    gap-2
+                    bg-[#FE5F62]
+                    hover:bg-[#e45457]
+                    text-white
+                    font-medium
+                    px-6
+                    py-3
+                    rounded-md
+                    transition-all
+                    duration-300
+                    mt-2
+                    self-start
+                    shadow-lg
+                    group
+                    w-auto
+                ">
                     Book Appointment
-                </a>
+                    <FaPaw className="inline-block ml-1 transition-transform group-hover:rotate-12" />
+                </Link>
                 {/* Mobile Menu Button */}
                 <button 
                     className="md:hidden text-[#3F3D56] p-2 focus:outline-none"
@@ -104,9 +120,28 @@ const Navbar = () => {
                         <div className="text-lg font-medium text-center">TnC</div>
                     </NavLink>
                     <div className="pt-2 pb-1">
-                        <a href="https://wa.me/919175129919" target="_blank" rel="noopener noreferrer" className="mx-auto block w-[80%] py-2.5 bg-[#FE5F62] hover:bg-[#e45457] text-center rounded-md transition-colors">
-                            <div className="text-white text-lg font-medium">Book Appointment</div>
-                        </a>
+                    <Link to="/bookappointment" className="
+                    inline-flex
+                    items-center
+                    gap-2
+                    bg-[#FE5F62]
+                    hover:bg-[#e45457]
+                    text-white
+                    font-medium
+                    px-6
+                    py-3
+                    rounded-md
+                    transition-all
+                    duration-300
+                    mt-2
+                    self-start
+                    shadow-lg
+                    group
+                    w-auto
+                ">
+                    Book Appointment
+                    <FaPaw className="inline-block ml-1 transition-transform group-hover:rotate-12" />
+                </Link>
                     </div>
                 </div>
             </div>
