@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaPaw, FaCalendarAlt, FaClock, FaUser, FaDog, FaPhone, FaEnvelope, FaNotesMedical } from 'react-icons/fa';
+import { FaPaw, FaCalendarAlt, FaClock, FaUser, FaDog, FaPhoneAlt, FaEnvelope, FaNotesMedical } from 'react-icons/fa';
 
 const BookApointment = () => {
   const [formData, setFormData] = useState({
@@ -152,7 +152,7 @@ const BookApointment = () => {
                       required
                     />
                   </div>
-                  <div>
+                  {/* <div>
                     <label className="block text-gray-700 font-medium mb-2" htmlFor="email">
                       Email Address*
                     </label>
@@ -170,14 +170,14 @@ const BookApointment = () => {
                         required
                       />
                     </div>
-                  </div>
+                  </div> */}
                   <div>
                     <label className="block text-gray-700 font-medium mb-2" htmlFor="phone">
                       Phone Number*
                     </label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <FaPhone className="text-gray-400" />
+                        <FaPhoneAlt className="text-gray-400" />
                       </div>
                       <input
                         type="tel"
@@ -331,7 +331,7 @@ const BookApointment = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md text-center">
             <div className="text-[#FE5F62] text-3xl mb-4 flex justify-center">
-              <FaPhone />
+              <FaPhoneAlt />
             </div>
             <h3 className="text-xl font-semibold mb-2 text-[#3F3D56]">Contact Us</h3>
             <p className="text-gray-600">

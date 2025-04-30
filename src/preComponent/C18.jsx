@@ -1,6 +1,8 @@
 import React from 'react'
 import dogsvg from '../assets/dog.svg'
+import paymentSuccess from '../assets/PaymentSuccess.png'
 import { FaPaw } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 import pawsvg from '../assets/paw.svg'
 
 const C18 = () => {
@@ -11,8 +13,8 @@ const C18 = () => {
             <img src={pawsvg} alt="pawsvg" className='hidden sm:block absolute left-[8%] bottom-[16%] w-5 sm:w-6 md:w-8 opacity-70 animate-pulse z-0' style={{animationDelay: '0.5s'}} />
             
             <div className='relative w-full md:w-1/2 max-w-2xl order-2 md:order-1 z-10'>
-                <img src={pawsvg} alt="pawsvg" className='hidden sm:block absolute right-[8%] top-[10%] w-5 sm:w-6 opacity-70 animate-pulse' style={{animationDelay: '0.3s'}} />
-                <img src={pawsvg} alt="pawsvg" className='hidden sm:block absolute right-0 top-[3%] w-6 sm:w-7 opacity-70 animate-pulse' style={{animationDelay: '0.8s'}} />
+                {/* <img src={pawsvg} alt="pawsvg" className='hidden sm:block absolute right-[8%] top-[10%] w-5 sm:w-6 opacity-70 animate-pulse' style={{animationDelay: '0.3s'}} /> */}
+                {/* <img src={pawsvg} alt="pawsvg" className='hidden sm:block absolute right-0 top-[3%] w-6 sm:w-7 opacity-70 animate-pulse' style={{animationDelay: '0.8s'}} /> */}
 
                 {/* Heading with responsive text sizes */}
                 <div className="mb-6 sm:mb-8 md:mb-12">
@@ -31,12 +33,28 @@ const C18 = () => {
                 </div>
                 
                 {/* Enhanced button with hover effects */}
-                <button className="px-4 sm:px-6 py-2 sm:py-3 rounded-md border-2 border-[#FE5F62] text-[#FE5F62] font-medium 
-                  transition-all duration-300 hover:bg-[#FE5F62] hover:text-white hover:shadow-lg 
-                  flex items-center gap-2 group text-sm sm:text-base">
-                    Learn More
+                <Link to="/bookappointment" className="
+                    inline-flex
+                    items-center
+                    gap-2
+                    bg-[#FE5F62]
+                    hover:bg-[#e45457]
+                    text-white
+                    font-medium
+                    px-6
+                    py-3
+                    rounded-md
+                    transition-all
+                    duration-300
+                    mt-2
+                    self-start
+                    shadow-lg
+                    group
+                    w-auto
+                ">
+                    Book Appointment
                     <FaPaw className="inline-block ml-1 transition-transform group-hover:rotate-12" />
-                </button>
+                </Link>
             </div>
             
             <div className='relative w-full max-w-xs sm:max-w-sm md:w-1/2 md:max-w-md lg:max-w-lg order-1 md:order-2 mb-6 md:mb-0 z-10'>
@@ -45,7 +63,7 @@ const C18 = () => {
                   animate-pulse transition-all duration-1000'></div>
 
                 {/* Responsive image */}
-                <img src={dogsvg} alt="Dog illustration" className="relative z-10 w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto drop-shadow-xl" />
+                <img src={paymentSuccess} alt="Dog illustration" className="relative z-10 w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto drop-shadow-xl" />
             </div>
         </div>
     );
