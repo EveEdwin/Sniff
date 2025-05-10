@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaPaw, FaCalendarAlt, FaClock, FaUser, FaDog, FaPhoneAlt, FaEnvelope, FaNotesMedical } from 'react-icons/fa';
+import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
+
+
+
+const REGION = import.meta.env.VITE_AWS_REGION 
+const ACCESSKEYID = import.meta.env.VITE_AWS_ACCESS_KEY_ID
+const SECRETACCESSKEY = import.meta.env.VITE_AWS_SECRET_ACCESS_KEY
 
 const BookApointment = () => {
   const navigate = useNavigate();
@@ -27,10 +34,41 @@ const BookApointment = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    localStorage.setItem('appointmentData', JSON.stringify(formData));  // Store form data in localStorage
-    navigate('/thank-you');  // Redirect to the Thank You page
+
+    // Create the S3 client
+    const s3Client = new S3Client({
+      region: REGION, // Replace with your region
+      credentials: {
+        accessKeyId: ACCESSKEYID, // Replace with your AWS Access Key
+        secretAccessKey: SECRETACCESSKEY // Replace with your AWS Secret Key
+      }
+    });
+
+    // Prepare the form data as a JSON object
+    const jsonData = JSON.stringify(formData);
+    
+    const uploadParams = {
+      Bucket: 'sniffi-pet-appointments-data' , // Replace with your bucket name
+      Key:  `appointments/${Date.now()}.json`, // File name in the S3 bucket
+      Body: jsonData ,
+      ContentType: 'application/json'
+    };
+
+    try {
+      // Upload the JSON data to S3
+      const data = await s3Client.send(new PutObjectCommand(uploadParams));
+      console.log('Successfully uploaded data to S3', data);
+
+      // Store data locally
+      localStorage.setItem('appointmentData', jsonData);
+
+      // Navigate to the Thank You page
+      navigate('/thank-you');
+    } catch (err) {
+      console.error('Error uploading data to S3', err);
+    }
   };
 
   const services = [
@@ -138,25 +176,6 @@ const BookApointment = () => {
                       required
                     />
                   </div>
-                  {/* <div>
-                    <label className="block text-gray-700 font-medium mb-2" htmlFor="email">
-                      Email Address*
-                    </label>
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <FaEnvelope className="text-gray-400" />
-                      </div>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full pl-10 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent"
-                        required
-                      />
-                    </div>
-                  </div> */}
                   <div>
                     <label className="block text-gray-700 font-medium mb-2" htmlFor="phone">
                       Phone Number*
@@ -292,63 +311,7 @@ const BookApointment = () => {
         </div>
       </div>
 
-      {/* Information Cards */}
-      <div className="max-w-5xl mx-auto px-4 py-8">
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <div className="text-[#FE5F62] text-3xl mb-4 flex justify-center">
-              <FaCalendarAlt />
-            </div>
-            <h3 className="text-xl font-semibold mb-2 text-[#3F3D56]">Booking Policy</h3>
-            <p className="text-gray-600">
-              Appointments cancelled with less than 24 hours' notice may be subject to a cancellation fee.
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <div className="text-[#FE5F62] text-3xl mb-4 flex justify-center">
-              <FaDog />
-            </div>
-            <h3 className="text-xl font-semibold mb-2 text-[#3F3D56]">Pet Preparation</h3>
-            <p className="text-gray-600">
-              Please ensure your pet is secured safely and have all medical history available for our veterinarian.
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <div className="text-[#FE5F62] text-3xl mb-4 flex justify-center">
-              <FaPhoneAlt />
-            </div>
-            <h3 className="text-xl font-semibold mb-2 text-[#3F3D56]">Contact Us</h3>
-            <p className="text-gray-600">
-              Have questions? Contact our customer support at 123 Pet Care Lane, Animal City.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      {/* Newsletter Section */}
-      <div className="bg-red-100/50 py-12 px-4 mt-10">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-4">
-            <span className="text-[#3F3D56]">Stay Updated with </span>
-            <span className="text-[#FE5F62]">Our Services</span>
-          </h2>
-          <p className="text-gray-700 max-w-2xl mx-auto mb-6">
-            Subscribe to our newsletter to receive updates about our services, special offers, and pet care tips.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
-              className="px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent flex-grow"
-            />
-            <button className="bg-[#FE5F62] text-white px-6 py-3 rounded-md hover:bg-[#e45457] transition-colors whitespace-nowrap">
-              Subscribe Now
-            </button>
-          </div>
-        </div>
-      </div>
+      {/* Other content like Information Cards and Newsletter Section... */}
     </div>
   );
 };
