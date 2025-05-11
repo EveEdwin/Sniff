@@ -1,58 +1,18 @@
 import React from 'react';
-import { FaPaw } from 'react-icons/fa';
 import { IoPawOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 
-const Component2 = () => {
-  const services = [
-    {
-      title: 'Vet Consultation',
-      desc: 'Get expert advice and personalized care from professional veterinarians, ensuring your pet’s well-being at every stage.',
-      status: 'Explore →',
-      route: '/services/vet-consultation'
-    },
-    {
-      title: 'Wellness Exam',
-      desc: 'At Sniffi, wellness means proactive care. We offer personalized wellness plans focused on preventive check-ups, nutrition, and early detection, making it easier to keep your pets healthy, happy, and thriving every day.',
-      status: 'Explore →',
-      route: '/services/wellness'
-    },
-    {
-      title: 'Vaccination',
-      desc: 'Keep your pet safe with essential vaccinations, protecting them from diseases and ensuring a long, healthy life.',
-      status: 'Explore →',
-      route: '/services/vaccination'
-    },
-    {
-      title: 'Pet Registration',
-      desc: 'Hassle-free registration to maintain your pet’s health records digitally for easy access anywhere, anytime.',
-      status: 'Explore →',
-      route: '/services/pet-registration'
-    },
-    {
-      title: 'Diagnostics',
-      desc: 'Advanced lab tests and screenings for accurate disease detection, early treatment, and better health management.',
-      status: 'Explore →',
-      route: '/services/diagnostics'
-    },
-    {
-      title: 'Mating',
-      desc: '(COMING SOON)',
-      status: 'Explore →',
-      route: '/services/mating'
-    },
-  ];
-
+const Component2 = ({ services, heading }) => {
   return (
     <div className="w-full max-w-[1440px] mx-auto py-12 px-4 md:px-8 bg-red-200/50 overflow-hidden">
       <div className="text-center mb-12 md:mb-16">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold  tracking-wider">
-          <span className="text-[#3F3D56]">We Provide </span>
-          <span className="text-[#FE5F62]">Best Services</span>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wider">
+          <span className="text-[#3F3D56]">{heading.prefix}</span>
+          <span className="text-[#FE5F62]">{heading.highlight}</span>
         </h2>
       </div>
-      
-      <div className="flex flex-col md:flex-row flex-wrap justify-center  gap-8 md:gap-6 lg:gap-12">
+
+      <div className="flex flex-col md:flex-row flex-wrap justify-center gap-8 md:gap-6 lg:gap-12">
         {services.map((service, index) => (
           <div key={index} className="relative w-full max-w-[400px] mx-auto md:mx-0">
             <div className="absolute -top-7 left-7 w-14 h-14 bg-[#FFFFFF] rounded-full outline-[0.70px] outline-offset-[-0.70px] outline-[#FE5F62] overflow-hidden">
@@ -61,10 +21,10 @@ const Component2 = () => {
               </div>
             </div>
             <div className="w-full h-60 bg-[#FFFFFF] rounded-xl outline-[0.70px] outline-offset-[-0.70px] outline-[#FE5F62] overflow-hidden p-6 pt-10">
-              <Link to={service.route} className="text-[#FE5F62] text-2xl md:text-3xl font-medium  tracking-wide">{service.title}</Link>
-              <p className="text-[#3F3D56] text-sm font-normal  leading-tight tracking-tight mt-4">{service.desc}</p>
+              <Link to={service.route} className="text-[#FE5F62] text-2xl md:text-3xl font-medium tracking-wide">{service.title}</Link>
+              <p className="text-[#3F3D56] text-sm font-normal leading-tight tracking-tight mt-4">{service.desc}</p>
               <div className="mt-4">
-                <span className="text-[#FE5F62] text-base font-normal  tracking-tight">Explore</span>
+                <span className="text-[#FE5F62] text-base font-normal tracking-tight">Explore</span>
                 <div className="w-3.5 h-px bg-[#FE5F62] mt-1" />
               </div>
             </div>
@@ -73,6 +33,6 @@ const Component2 = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Component2;
