@@ -293,7 +293,7 @@ const BookApointment = () => {
                     required
                   />
                   <label htmlFor="agreeToTerms" className="ml-2 block text-gray-700">
-                    I agree to the <a href="/terms" className="text-[#FE5F62] hover:underline">Terms & Conditions</a>
+                    I agree to the <a href="/terms" className="text-[#FE5F62] hover:underline">Terms & Conditions*</a>
                   </label>
                 </div>
               </div>
