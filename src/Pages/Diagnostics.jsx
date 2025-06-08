@@ -36,7 +36,7 @@ const Diagnostics = () => {
   imageAlt="Dog in Diagnostics"
 />
         <Component17 />
-        <Component12 />
+        {/* <Component12 /> */}
         <Component10 />
         <Component3 />
         <Component19 />

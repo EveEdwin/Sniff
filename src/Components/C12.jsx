@@ -3,7 +3,7 @@ import circlepaw from "../assets/circlepaw.svg";
 
 function Component19() {
   const dogAges = ["Puppy", "Adult", "Senior"];
-  const catAges = ["Puppy", "Adult", "Senior"];
+  const catAges = ["Kitten", "Adult", "Senior"];
 
   return (
     <div className="bg-red-100 py-12 text-center">

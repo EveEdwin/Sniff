@@ -20,14 +20,18 @@ const Component2 = ({ services, heading }) => {
                 <IoPawOutline className="w-10 h-10 text-[#FE5F62]" />
               </div>
             </div>
-            <div className="w-full h-60 bg-[#FFFFFF] rounded-xl outline-[0.70px] outline-offset-[-0.70px] outline-[#FE5F62] overflow-hidden p-6 pt-10">
-              <Link to={service.route} className="text-[#FE5F62] text-2xl md:text-3xl font-medium tracking-wide">{service.title}</Link>
-              <p className="text-[#3F3D56] text-sm font-normal leading-tight tracking-tight mt-4">{service.desc}</p>
-              <div className="mt-4">
-                <span className="text-[#FE5F62] text-base font-normal tracking-tight">Explore</span>
-                <div className="w-3.5 h-px bg-[#FE5F62] mt-1" />
-              </div>
-            </div>
+            <div className="w-full min-h-[15rem] bg-[#FFFFFF] rounded-xl outline outline-[0.7px] outline-offset-[-0.7px] outline-[#FE5F62] overflow-hidden p-6 pt-10">
+  <Link to={service.route} className="text-[#FE5F62] text-2xl md:text-3xl font-medium tracking-wide">
+    {service.title}
+  </Link>
+  <p className="text-[#3F3D56] text-sm font-normal leading-tight tracking-tight mt-4">
+    {service.desc}
+  </p>
+  <div className="mt-4">
+    <div className="w-3.5 h-px bg-[#FE5F62] mt-1" />
+  </div>
+</div>
+
           </div>
         ))}
       </div>

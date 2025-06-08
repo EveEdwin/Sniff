@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import useFeatures from '../hooks/useFeatures';
+import React, { useEffect, useState } from "react";
+import { getHomes } from "../homeApi";
 import Component15 from "../preComponent/C18";
 import Component14 from "../preComponent/C17";
 import Component9 from "../Components/C7";
 import Component6 from "../preComponent/C14";
-import Component11 from "../preComponent/C15";
 import Component13 from "../preComponent/C16";
 import Component10 from "../Components/C8";
 import Component7 from "../Components/C5";
 import Component8 from "../Components/C6";
+
 const pawPositions = [
   "top-4 left-4",
   "bottom-4 right-4",
@@ -21,10 +21,28 @@ const pawPositions = [
 ];
 
 const HomePage = () => {
-  const { features, loading, error } = useFeatures(); 
+  const [features, setFeatures] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  const fetchFeatures = async () => {
+    try {
+      const res = await getHomes();
+      setFeatures(res.data);
+      setLoading(false);
+    } catch (err) {
+      setError("Failed to fetch features");
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchFeatures();
+  }, []);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
+
   return (
     <div>
       <Component15 />
@@ -37,16 +55,7 @@ const HomePage = () => {
           { text: " Us?", color: "text-[#3F3D56]" },
         ]}
         features={features}
-        pawPositions={[
-          "top-4 left-4",
-          "bottom-4 right-4",
-          "top-1/2 left-1/4",
-          "top-1/3 right-1/3",
-          "bottom-1/4 left-1/3",
-          "top-10 right-10",
-          "bottom-10 left-10",
-          "top-1/4 right-1/4",
-        ]}
+        pawPositions={pawPositions}
       />
       <Component6
         headingParts={[
@@ -71,7 +80,6 @@ const HomePage = () => {
           },
         ]}
       />
-      {/* <Component11 /> */}
       <Component13 />
       <Component10 />
       <Component7 />
