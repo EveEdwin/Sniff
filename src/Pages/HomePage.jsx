@@ -8,8 +8,13 @@ import Component13 from "../preComponent/C16";
 import Component10 from "../Components/C8";
 import Component7 from "../Components/C5";
 import Component8 from "../Components/C6";
+import Component2 from "../Components/C3";
 
-
+import { getServices } from '../serviceCardApi';
+const heading = {
+  prefix: 'We Provide ',
+  highlight: 'Best Services'
+};
 const pawPositions = [
   "top-4 left-4",
   "bottom-4 right-4",
@@ -22,9 +27,33 @@ const pawPositions = [
 ];
 
 const HomePage = () => {
+  const [cardServices, setCardServices] = useState([]);
   const [features, setFeatures] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+ useEffect(() => {
+    const fetchData = async () => {
+      try {
+
+        const cardRes = await getServices();
+
+       
+        const formattedCards = cardRes.data.map((item) => ({
+          title: item.title,
+          desc: item.description,
+          status: 'Explore →',
+          route: '/services/' + item.title.toLowerCase().replace(/\s+/g, '-')
+        }));
+
+      
+        setCardServices(formattedCards);
+      } catch (err) {
+        console.error('API fetch error:', err);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const fetchFeatures = async () => {
     try {
@@ -58,7 +87,8 @@ const HomePage = () => {
         features={features}
         pawPositions={pawPositions}
       />
-      <Component6
+      <Component2 heading={heading} services={cardServices} />
+      {/*<Component6
         headingParts={[
           { text: "We Provide ", color: "text-[#3F3D56]" },
           { text: "Best Services", color: "text-[#FE5F62]" },
@@ -80,7 +110,7 @@ const HomePage = () => {
               "Expert vet care and health checkups to keep your pet healthy.",
           },
         ]}
-      />
+      />*/}
       <Component13 />
       <Component10 />
       <Component7 />
