@@ -9,6 +9,7 @@ import Component10 from "../Components/C8";
 import Component7 from "../Components/C5";
 import Component8 from "../Components/C6";
 
+
 const pawPositions = [
   "top-4 left-4",
   "bottom-4 right-4",
