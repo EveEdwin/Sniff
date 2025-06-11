@@ -223,25 +223,31 @@ const BookApointment = () => {
                       />
                     </div>
                   </div>
-                  <div>
-                    <label className="block text-gray-700 font-medium mb-2" htmlFor="time">
-                      Preferred Time*
-                    </label>
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <FaClock className="text-gray-400" />
-                      </div>
-                      <input
-                        type="time"
-                        id="time"
-                        name="time"
-                        value={formData.time}
-                        onChange={handleChange}
-                        className="w-full pl-10 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent"
-                        required
-                      />
-                    </div>
-                  </div>
+                 <div>
+  <label className="block text-gray-700 font-medium mb-2" htmlFor="time">
+    Preferred Time*
+  </label>
+  <div className="relative">
+    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+      <FaClock className="text-gray-400" />
+    </div>
+    <select
+      id="time"
+      name="time"
+      value={formData.time}
+      onChange={handleChange}
+      className="w-full pl-10 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent"
+      required
+    >
+      <option value="" disabled>Select a time slot</option>
+      <option value="9AM-12PM">9AM - 12PM</option>
+      <option value="12PM-3PM">12PM - 3PM</option>
+      <option value="3PM-6PM">3PM - 6PM</option>
+      <option value="6PM-9PM">6PM - 9PM</option>
+    </select>
+  </div>
+</div>
+
                   <div className="md:col-span-2">
                     <label className="block text-gray-700 font-medium mb-2" htmlFor="service">
                       Service Type*
