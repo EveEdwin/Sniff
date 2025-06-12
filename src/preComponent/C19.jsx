@@ -51,12 +51,12 @@ const Navbar = () => {
                     <NavLink to='/services' style={activeStyle} className="px-1 py-2 text-base lg:text-lg font-medium tracking-tight hover:text-[#FE5F62] transition-colors">
                         SERVICES
                     </NavLink>
-                    <NavLink to="/learning" style={activeStyle} className="px-1 py-2 text-base lg:text-lg font-medium tracking-tight hover:text-[#FE5F62] transition-colors">
+                    {/* <NavLink to="/learning" style={activeStyle} className="px-1 py-2 text-base lg:text-lg font-medium tracking-tight hover:text-[#FE5F62] transition-colors">
                         LEARNING
                     </NavLink>
                     <NavLink to="/social" style={activeStyle} className="px-1 py-2 text-base lg:text-lg font-medium tracking-tight hover:text-[#FE5F62] transition-colors">
                         SOCIAL
-                    </NavLink>
+                    </NavLink> */}
                     <NavLink to="tandc" style={activeStyle} className="px-1 py-2 text-base lg:text-lg font-medium tracking-tight hover:text-[#FE5F62] transition-colors">
                         TnC
                     </NavLink>
@@ -110,12 +110,12 @@ const Navbar = () => {
                     <NavLink to='/services' style={activeStyle} className="w-full py-3 flex items-center justify-center hover:bg-gray-50">
                         <div className="text-lg font-medium text-center">SERVICES</div>
                     </NavLink>
-                    <NavLink to="/learning" style={activeStyle} className="w-full py-3 flex items-center justify-center hover:bg-gray-50">
+                    {/* <NavLink to="/learning" style={activeStyle} className="w-full py-3 flex items-center justify-center hover:bg-gray-50">
                         <div className="text-lg font-medium text-center">LEARNING</div>
                     </NavLink>
                     <NavLink to="/social" style={activeStyle} className="w-full py-3 flex items-center justify-center hover:bg-gray-50">
                         <div className="text-lg font-medium text-center">SOCIAL</div>
-                    </NavLink>
+                    </NavLink> */}
                     <NavLink to="tandc" style={activeStyle} className="w-full py-3 flex items-center justify-center hover:bg-gray-50">
                         <div className="text-lg font-medium text-center">TnC</div>
                     </NavLink>

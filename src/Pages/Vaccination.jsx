@@ -1,13 +1,17 @@
 import React from 'react';
 import dog from '../assets/dogInDiagnoistic.svg';
 import ServiceHeading from '../preComponent/ServiceHeading';
-import WhyImp from '../Components/WhyImp';
+import Component17 from '../Components/C11';
+import Component12 from '../Components/C10';
+import Component11 from '../preComponent/C15';
+import Component7 from '../Components/C5';
+import Component8 from '../Components/C6';
+import Component_10 from '../Components/C1';
 import Component10 from '../Components/C8';
-import HowItWork from '../Components/HowItWork';
-import FAQ from '../Components/FAQ';
-import Component11 from '../preComponent/C15'
-import Component7 from '../Components/C5'
-import Component8 from '../Components/C6'
+import Component19 from '../Components/C12';
+import Component3 from '../Components/C4';
+import VaccHowItWork from '../Components/VaccHowItWork';
+import VaccinationCards from '../Components/VaccinationCards';
 
 const Vaccination = () => {
   return (
@@ -36,64 +40,15 @@ imageSrc={dog}
 imageAlt="Dog in Diagnostics"
   
 />
-
-<WhyImp
-  title="Why"
-  highlightText="It Important?"
-  points={[
-    "Vaccines prevent deadly diseases like rabies, distemper, parvovirus.",
-    "Core vaccinations are essential for puppies, kittens, and adult pets alike.",
-    "Ensures public safety and protects other animals in your neighborhood.",
-    "Missed vaccines can expose your pet to life-threatening risks."
-  ]}
-/>
-<WhyImp
-  title="Why At-Home "
-  highlightText="with Sniffi?"
-  points={[
-    "No crowded clinic visits risking infection exposure.",
-    "Pets stay relaxed in familiar surroundings.",
-    "Personalized vaccine schedule planning.",
-    "Quick, professional administration by licensed veterinarians."
-  ]}
-/>
-<Component10 />
-
-<HowItWork
-  title="How It Works"
-  steps={[
-    { step: "Step 1", description: "Book vaccination appointment through the Sniffi app." },
-    { step: "Step 2", description: "Vet visits home with necessary vaccines." },
-    { step: "Step 3", description: "Vaccination administered safely + vaccination records updated digitally." }
-  ]}
-/>
-
-<WhyImp
-  title="What's"
-  highlightText="Included?"
-  points={[
-    "Core vaccinations (Rabies, DHPPi, Lepto, etc.).",
-    "Non-core vaccines based on lifestyle risk (Kennel Cough, Lyme, etc.).",
-    "Digital vaccination record maintenance.",
-    "Post-vaccine monitoring and advice."
-  ]}
-/>
-
-<Component10 />
-
-<FAQ
-    title="Frequently Asked Questions"
-    faqs={[
-        { question: "Which vaccines are mandatory?", answer: "Core vaccines like Rabies are legally required." },
-        { question: "Will my pet be observed after the shot?", answer: "Yes, the vet will stay back briefly to monitor immediate reactions." },
-        { question: "How often are boosters needed?", answer: "Depends on the vaccine; typically annually or every 3 years." }
-    ]}
-/>
-
-      {/* <Component11 /> */}
-      <Component7 />
-      <Component8 />
-
+        <VaccinationCards />
+        {/* <Component12 /> */}
+        <Component10 />
+        <VaccHowItWork />
+        <Component19 />
+        <Component_10 />
+        {/* <Component11 /> */}
+        <Component7 />
+        <Component8 />
     </div>
   );
 };

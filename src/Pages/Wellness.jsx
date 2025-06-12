@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import dog from '../assets/dogInDiagnoistic.svg';
 import ServiceHeading from '../preComponent/ServiceHeading';
 import WhyImp from '../Components/WhyImp';
@@ -8,8 +9,26 @@ import FAQ from '../Components/FAQ';
 import Component11 from '../preComponent/C15'
 import Component7 from '../Components/C5'
 import Component8 from '../Components/C6'
-
+import { getHomes } from '../welllApi';
 const Wellness = () => {
+   const [faqs, setFaqs] = useState([]);
+
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const res = await getHomes();
+      const formatted = res.data.map(item => ({
+        question: item.title,
+        answer: item.description
+      }));
+      setFaqs(formatted);
+    } catch (err) {
+      console.error('Failed to fetch vet consultation FAQs:', err);
+    }
+  };
+
+  fetchData();
+}, []);
   return (
     <div>
       <ServiceHeading
@@ -77,15 +96,18 @@ imageAlt="Dog in Diagnostics"
 />
 
 <Component10 />
-
 <FAQ
+  title="Frequently Asked Questions"
+  faqs={faqs}
+/>
+{/* <FAQ
     title="Frequently Asked Questions"
     faqs={[
         { question: "How often should wellness exams be done?", answer: "Ideally once every year; senior pets or pets with existing conditions may need more frequent checks." },
         { question: "What happens if a health issue is found?", answer: "The vet will advise on immediate care and, if needed, recommend further diagnostics." },
         { question: "Is a wellness exam different from a consultation?", answer: "Yes — wellness exams focus on preventive health even if your pet seems healthy." }
     ]}
-/>
+/> */}
 
       {/* <Component11 /> */}
       <Component7 />

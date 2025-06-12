@@ -5,7 +5,7 @@ import Component10 from '../Components/C8';
 import Component11 from '../preComponent/C15';
 import Component7 from '../Components/C5';
 import Component8 from '../Components/C6';
-import { getHomes } from '../homeApi';
+import { getServices2 } from '../serviceApi';
 import { getServices } from '../serviceCardApi';
 
 const heading = {
@@ -20,7 +20,7 @@ const ServicePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const homeRes = await getHomes();
+        const homeRes = await getServices2();
         const cardRes = await getServices();
 
         const formattedHomes = homeRes.data.map((item) => ({

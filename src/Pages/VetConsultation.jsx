@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import React from 'react';
 import Component1 from '../Components/C2'
 import Component2 from '../Components/C3'
@@ -8,22 +9,33 @@ import Component8 from '../Components/C6'
 import ExpertVet from '../Components/ExpertVet';
 import WhyImp from '../Components/WhyImp';
 import HowItWork from '../Components/HowItWork';
+import { getHomes } from '../vetApi';
+
 
 const VetConsultation = () => {
+  const [points, setPoints] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await getHomes();
+        const formatted = res.data.map(item => `${item.title}`);
+        setPoints(formatted);
+      } catch (err) {
+        console.error('Failed to fetch vet consultation data:', err);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
-      <ExpertVet/>
-      {/* <Component10 /> */}
+      <ExpertVet />
       <WhyImp
-  title="Why"
-  highlightText="It Important?"
-  points={[
-    "Pets often hide symptoms — early detection is key.",
-    "80% of chronic illnesses are preventable with timely consultations.",
-    "Regular check-ups detect behavioral issues, allergies, infections early.",
-    "Peace of mind knowing your pet’s health is monitored professionally."
-  ]}
-/>
+        title="Why"
+        highlightText="It Important?"
+        points={points}
+      />
 
 
       {/* <Component1 /> */}

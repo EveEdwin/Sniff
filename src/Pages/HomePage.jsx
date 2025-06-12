@@ -9,6 +9,7 @@ import Component10 from "../Components/C8";
 import Component7 from "../Components/C5";
 import Component8 from "../Components/C6";
 import Component2 from "../Components/C3";
+import StatsSec from "../preComponent/StatsSec";
 
 import { getServices } from '../serviceCardApi';
 const heading = {
@@ -111,7 +112,8 @@ const HomePage = () => {
           },
         ]}
       />*/}
-      <Component13 />
+      {/* <Component13 /> */}
+      <StatsSec />
       <Component10 />
       <Component7 />
       <Component8 />
