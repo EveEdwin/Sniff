@@ -12,7 +12,7 @@ import Component19 from '../Components/C12';
 import Component3 from '../Components/C4';
 import VaccHowItWork from '../Components/VaccHowItWork';
 import VaccinationCards from '../Components/VaccinationCards';
-
+import VaccineCat from '../Components/VaccineCat';
 const Vaccination = () => {
   return (
     <div>
@@ -40,7 +40,8 @@ imageSrc={dog}
 imageAlt="Dog in Diagnostics"
   
 />
-        <VaccinationCards />
+<VaccineCat />
+        {/* <VaccinationCards /> */}
         {/* <Component12 /> */}
         <Component10 />
         <VaccHowItWork />

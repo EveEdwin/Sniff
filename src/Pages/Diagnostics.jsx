@@ -10,6 +10,7 @@ import Component_10 from '../Components/C1';
 import Component10 from '../Components/C8';
 import Component19 from '../Components/C12';
 import Component3 from '../Components/C4';
+import DiagnosticCat from '../Components/DiagnosticCat';
 
 const Diagnostics = () => {
   return (
@@ -35,7 +36,8 @@ const Diagnostics = () => {
   imageSrc={dog}
   imageAlt="Dog in Diagnostics"
 />
-        <Component17 />
+<DiagnosticCat />
+        {/* <Component17 /> */}
         {/* <Component12 /> */}
         <Component10 />
         <Component3 />
