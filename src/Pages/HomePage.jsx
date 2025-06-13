@@ -10,6 +10,8 @@ import Component7 from "../Components/C5";
 import Component8 from "../Components/C6";
 import Component2 from "../Components/C3";
 import StatsSec from "../preComponent/StatsSec";
+import Loader from '../Components/Loader'; // adjust path as needed
+
 
 import { getServices } from '../serviceCardApi';
 const heading = {
@@ -71,7 +73,7 @@ const HomePage = () => {
     fetchFeatures();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader />;
   if (error) return <p>{error}</p>;
 
   return (
