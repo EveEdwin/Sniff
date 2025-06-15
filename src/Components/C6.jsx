@@ -103,40 +103,50 @@ const Footer = () => {
 
                     {/* Services Section - New addition */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Our Services</h3>
-                        <ul className="space-y-3">
-                            <li><a href="#" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </svg>
-                                Vet Consultation
-                            </a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </svg>
-                                Vaccinations
-                            </a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </svg>
-                                Wellness Exams
-                            </a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </svg>
-                                Pet Registration
-                            </a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </svg>
-                                Diagnostics
-                            </a></li>
-                        </ul>
-                    </div>
+  <h3 className="text-lg font-semibold mb-4">Our Services</h3>
+  <ul className="space-y-3">
+    <li>
+      <Link to="/services/service1" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+        Vet Consultation
+      </Link>
+    </li>
+    <li>
+      <Link to="/services/service2" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+        Vaccinations
+      </Link>
+    </li>
+    <li>
+      <Link to="/services/service3" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+        Wellness Exams
+      </Link>
+    </li>
+    <li>
+      <Link to="/services/service5" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+        Pet Registration
+      </Link>
+    </li>
+    <li>
+      <Link to="/services/service4" className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+        Diagnostics
+      </Link>
+    </li>
+  </ul>
+</div>
 
                     {/* Follow Us Section */}
                     <div>
