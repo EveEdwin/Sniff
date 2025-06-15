@@ -9,6 +9,12 @@ import Component16 from "./preComponent/C19";
 import { Routes, Route } from 'react-router-dom'
 import ThankYouPage from "./Pages/ThankYouPage"
 import routes from "./routes/service";
+import VetConsultation from "./Pages/VetConsultation";
+import Vaccination from "./Pages/Vaccination";
+import Wellness from "./Pages/Wellness";
+import Diagnostics from "./Pages/Diagnostics";
+import PetRegistration from "./Pages/PetRegistration";
+import Mating from "./Pages/Mating";
 
 
 function App() {
@@ -22,10 +28,15 @@ function App() {
         {/* <Route path="/social" element={<SocialPage />} /> */}
         <Route path="/tandc" element={<TandC />} />
         <Route path="/thank-you" element={<ThankYouPage />} />
+        
         <Route path="/bookappointment" element={<BookApointment />} />
-        {routes.map((route, index) => (
-          <Route key={index} path={route.path} element={route.element} />
-        ))}
+        <Route path="/services/service1" element={<VetConsultation />} />
+        <Route path="/services/service2" element={<Vaccination />} />
+        <Route path="/services/service3" element={<Wellness />} />
+        <Route path="/services/service4" element={<Diagnostics />} />
+        <Route path="/services/service5" element={<PetRegistration />} />  
+        <Route path="/services/service6" element={<Mating />} />
+      
       </Routes>
     </>
   );

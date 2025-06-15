@@ -28,12 +28,12 @@ const ServicePage = () => {
           description: item.description
         }));
 
-        const formattedCards = cardRes.data.map((item) => ({
-          title: item.title,
-          desc: item.description,
-          status: 'Explore →',
-          route: '/services/' + item.title.toLowerCase().replace(/\s+/g, '-')
-        }));
+        const formattedCards = cardRes.data.map((item, index) => ({
+  title: item.title,
+  desc: item.description,
+  status: 'Explore →',
+  route: '/services/service' + (index + 1)
+}));
 
         setHomeServices(formattedHomes);
         setCardServices(formattedCards);
