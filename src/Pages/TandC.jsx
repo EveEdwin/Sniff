@@ -69,13 +69,19 @@ const TandC = () => {
 
           <div className="space-y-6 text-gray-700">
             {terms.map((term, index) => (
-              <div key={index}>
-                <h3 className="text-xl text-[#FE5F62] font-medium mb-3">
-                  {index + 1}. {term.title}
-                </h3>
-                <p className="mb-3">{term.content}</p>
-              </div>
-            ))}
+    <div key={index} className="space-y-4">
+      <h3 className="text-xl text-[#FE5F62] font-medium">
+        {index + 1}. {term.title}
+      </h3>
+      <div className="space-y-2 leading-relaxed">
+        {term.content
+          .split(/(?<=\.)\s+(?=[A-Z])/)
+          .map((point, i) => (
+            <p key={i} className="pl-2 text-lg"><span className="text-2xl align-middle mr-2">•</span>{point.trim()}</p>
+        ))}
+      </div>
+    </div>
+  ))}
 
             <div className="flex items-center justify-center mt-8 mb-4">
               <FaPaw className="text-red-200 text-4xl" />
