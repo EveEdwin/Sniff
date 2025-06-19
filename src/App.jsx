@@ -6,7 +6,7 @@ import ServicesPage from "./Pages/ServicesPage";
 import SocialPage from "./Pages/SocialPage";
 import TandC from "./Pages/TandC";
 import Component16 from "./preComponent/C19";
-import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import ThankYouPage from "./Pages/ThankYouPage"
 import routes from "./routes/service";
 import VetConsultation from "./Pages/VetConsultation";
@@ -15,11 +15,14 @@ import Wellness from "./Pages/Wellness";
 import Diagnostics from "./Pages/Diagnostics";
 import PetRegistration from "./Pages/PetRegistration";
 import Mating from "./Pages/Mating";
+import ScrollToTop from "./Components/ScrollToTop";
 
 
 function App() {
   return (
     <>
+    
+    <ScrollToTop />
       <Component16 />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -38,6 +41,7 @@ function App() {
         <Route path="/services/service6" element={<Mating />} />
       
       </Routes>
+    
     </>
   );
 }
