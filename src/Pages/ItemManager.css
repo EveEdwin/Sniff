@@ -1,0 +1,43 @@
+.im-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.im-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.im-item-label {
+  font-size: 1.5rem;   /* larger size */
+  font-weight: 500;    /* bolder font */
+  color: #FE5F62;
+}
+
+.im-item-sub {
+  font-size: 1.2rem;     /* keep or increase */
+  font-weight: 600;    /* bolder font */
+  color: #444;
+}
+
+.im-item-para {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.im-item-bullets {
+  margin-top: 0.75rem;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #333;
+}
+
+.im-item-bullets li {
+  margin-bottom: 0.5rem;
+}
