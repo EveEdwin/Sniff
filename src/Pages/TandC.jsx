@@ -7,43 +7,26 @@ const TandC = () => {
   const [terms, setTerms] = useState([]);
 
   useEffect(() => {
-    const fetchTerms = async () => {
-      try {
-        const res = await getTerms();
-        setTerms(res.data);
-      } catch (err) {
-        console.error('Failed to fetch Terms:', err);
-      }
-    };
-    fetchTerms();
+    getTerms()
+      .then(res => setTerms(Array.isArray(res.data) ? res.data.reverse() : []))
+      .catch(err => console.error('Failed to fetch Terms:', err));
   }, []);
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="bg-red-100/50 py-16 px-4">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-wide mb-6">
-            <span className="text-[#3F3D56]">Terms & </span>
-            <span className="text-[#FE5F62]">Conditions</span>
-          </h1>
-          <p className="text-[#3F3D56] text-base md:text-xl max-w-3xl mx-auto mb-6">
-            Please read these terms carefully before using our services. By accessing or using Sniffi's pet care services,
-            you agree to be bound by these terms and conditions.
-          </p>
-        </div>
-      </div>
-
       <div className="max-w-6xl mx-auto px-4 py-8 bg-white">
-        <div className="bg-white rounded-lg p-6 md:p-8 shadow-sm border border-gray-100">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#3F3D56] mb-6">Terms of Service</h2>
+        <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+          <h2 className="text-2xl font-semibold text-[#3F3D56] mb-6">
+            Terms of Service
+          </h2>
 
           <ul className="im-list">
-            {terms.map((term) => (
+            {terms.map(term => (
               <li key={term._id} className="im-item">
                 <strong className="im-item-label">{term.title}</strong>
 
-                {term.sections?.map((sec, idx) => (
-                  <div key={idx} className="im-section">
+                {term.sections?.map((sec, i) => (
+                  <div key={i} className="im-section">
                     {sec.subtitle && <p className="im-item-sub">{sec.subtitle}</p>}
                     {sec.paragraph && <p className="im-item-para">{sec.paragraph}</p>}
                     {sec.bullets && (
@@ -51,14 +34,14 @@ const TandC = () => {
                         {sec.bullets
                           .replace(/\/{2,}/g, '//')
                           .split('//')
-                          .map(b => b.trim())
-                          .filter(b => b.length)
-                          .map((b, i) => <li key={i}>{b}</li>)}
+                          .map((b, j) => b.trim())
+                          .filter(Boolean)
+                          .map((b, j) => <li key={j}>{b}</li>)
+                        }
                       </ul>
                     )}
                   </div>
                 ))}
-
               </li>
             ))}
           </ul>
