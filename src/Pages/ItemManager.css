@@ -9,35 +9,40 @@
 
 .im-item {
   border-bottom: 1px solid #eee;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .im-item-label {
-  font-size: 1.5rem;   /* larger size */
-  font-weight: 500;    /* bolder font */
+  font-size: 1.6rem;
+  font-weight: 600;
   color: #FE5F62;
+  margin-bottom: 1rem;
+  display: block;
 }
 
 .im-item-sub {
-  font-size: 1.2rem;     /* keep or increase */
-  font-weight: 600;    /* bolder font */
+  font-size: 1.25rem;
+  font-weight: 600;
   color: #444;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .im-item-para {
-  margin-top: 0.5rem;
   font-size: 1rem;
   color: #444;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
 }
 
 .im-item-bullets {
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   list-style-type: disc;
-  padding-left: 1.5rem;
+  padding-left: 1.75rem;
   color: #333;
 }
 
 .im-item-bullets li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
 }
