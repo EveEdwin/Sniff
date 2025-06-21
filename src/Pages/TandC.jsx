@@ -15,7 +15,6 @@ const TandC = () => {
         console.error('Failed to fetch Terms:', err);
       }
     };
-
     fetchTerms();
   }, []);
 
@@ -28,7 +27,8 @@ const TandC = () => {
             <span className="text-[#FE5F62]">Conditions</span>
           </h1>
           <p className="text-[#3F3D56] text-base md:text-xl max-w-3xl mx-auto mb-6">
-            Please read these terms carefully before using our services. By accessing or using Sniffi's pet care services, you agree to be bound by these terms and conditions.
+            Please read these terms carefully before using our services. By accessing or using Sniffi's pet care services,
+            you agree to be bound by these terms and conditions.
           </p>
         </div>
       </div>
@@ -38,22 +38,27 @@ const TandC = () => {
           <h2 className="text-2xl md:text-3xl font-semibold text-[#3F3D56] mb-6">Terms of Service</h2>
 
           <ul className="im-list">
-            {terms.map((item) => (
-              <li key={item._id} className="im-item">
-                <strong className="im-item-label">{item.title}</strong>
-                {item.subtitle && <p className="im-item-sub">{item.subtitle}</p>}
-                {item.paragraph && <p className="im-item-para">{item.paragraph}</p>}
-                {item.description && (
-                  <ul className="im-item-bullets">
-                    {item.description
-                      .replace(/\/{2,}/g, '//')
-                      .split('//')
-                      .map(b => b.trim())
-                      .filter(b => b.length > 0)
-                      .map((b, i) => <li key={i}>{b}</li>)
-                    }
-                  </ul>
-                )}
+            {terms.map((term) => (
+              <li key={term._id} className="im-item">
+                <strong className="im-item-label">{term.title}</strong>
+
+                {term.sections?.map((sec, idx) => (
+                  <div key={idx} className="im-section">
+                    {sec.subtitle && <p className="im-item-sub">{sec.subtitle}</p>}
+                    {sec.paragraph && <p className="im-item-para">{sec.paragraph}</p>}
+                    {sec.bullets && (
+                      <ul className="im-item-bullets">
+                        {sec.bullets
+                          .replace(/\/{2,}/g, '//')
+                          .split('//')
+                          .map(b => b.trim())
+                          .filter(b => b.length)
+                          .map((b, i) => <li key={i}>{b}</li>)}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+
               </li>
             ))}
           </ul>
