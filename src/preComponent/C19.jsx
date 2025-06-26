@@ -46,10 +46,10 @@ const Navbar = () => {
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex justify-center items-center gap-4 lg:gap-8 xl:gap-12 flex-wrap mx-4">
                     <NavLink to="/" style={activeStyle} className="px-1 py-2 text-base lg:text-lg font-medium tracking-tight hover:text-[#FE5F62] transition-colors">
-                        HOME
+                        Home
                     </NavLink>
                     <NavLink to='/services' style={activeStyle} className="px-1 py-2 text-base lg:text-lg font-medium tracking-tight hover:text-[#FE5F62] transition-colors">
-                        SERVICES
+                        Services
                     </NavLink>
                     {/* <NavLink to="/learning" style={activeStyle} className="px-1 py-2 text-base lg:text-lg font-medium tracking-tight hover:text-[#FE5F62] transition-colors">
                         LEARNING
@@ -57,9 +57,13 @@ const Navbar = () => {
                     <NavLink to="/social" style={activeStyle} className="px-1 py-2 text-base lg:text-lg font-medium tracking-tight hover:text-[#FE5F62] transition-colors">
                         SOCIAL
                     </NavLink> */}
+                    <NavLink to="privacyTerms" style={activeStyle} className="px-1 py-2 text-base lg:text-lg font-medium tracking-tight hover:text-[#FE5F62] transition-colors">
+                        Privacy
+                    </NavLink>
                     <NavLink to="tandc" style={activeStyle} className="px-1 py-2 text-base lg:text-lg font-medium tracking-tight hover:text-[#FE5F62] transition-colors">
                         TnC
                     </NavLink>
+                    
                 </div>
 
                 {/* Book Appointment Button - Always visible */}
@@ -105,10 +109,10 @@ const Navbar = () => {
             >
                 <div className="flex flex-col w-full space-y-1 pt-4 pb-4">
                     <NavLink to="/" style={activeStyle} className="w-full py-3 flex items-center justify-center hover:bg-gray-50">
-                        <div className="text-lg font-medium text-center">HOME</div>
+                        <div className="text-lg font-medium text-center">Home</div>
                     </NavLink>
                     <NavLink to='/services' style={activeStyle} className="w-full py-3 flex items-center justify-center hover:bg-gray-50">
-                        <div className="text-lg font-medium text-center">SERVICES</div>
+                        <div className="text-lg font-medium text-center">Services</div>
                     </NavLink>
                     {/* <NavLink to="/learning" style={activeStyle} className="w-full py-3 flex items-center justify-center hover:bg-gray-50">
                         <div className="text-lg font-medium text-center">LEARNING</div>
@@ -116,7 +120,11 @@ const Navbar = () => {
                     <NavLink to="/social" style={activeStyle} className="w-full py-3 flex items-center justify-center hover:bg-gray-50">
                         <div className="text-lg font-medium text-center">SOCIAL</div>
                     </NavLink> */}
-                    <NavLink to="tandc" style={activeStyle} className="w-full py-3 flex items-center justify-center hover:bg-gray-50">
+                    
+                    <NavLink to="privacyTerms" style={activeStyle} className="w-full py-3 flex items-center justify-center hover:bg-gray-50">
+                        <div className="text-lg font-medium text-center">Privacy</div>
+                    </NavLink>
+                     <NavLink to="tandc" style={activeStyle} className="w-full py-3 flex items-center justify-center hover:bg-gray-50">
                         <div className="text-lg font-medium text-center">TnC</div>
                     </NavLink>
                     <div className="pt-2 pb-1">

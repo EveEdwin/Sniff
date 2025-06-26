@@ -16,6 +16,7 @@ import Diagnostics from "./Pages/Diagnostics";
 import PetRegistration from "./Pages/PetRegistration";
 import Mating from "./Pages/Mating";
 import ScrollToTop from "./Components/ScrollToTop";
+import PrivacyTerm from "./Pages/PrivacyTerm";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         {/* <Route path="/learning" element={<LearningPage />} /> */}
         {/* <Route path="/social" element={<SocialPage />} /> */}
         <Route path="/tandc" element={<TandC />} />
+        <Route path="/privacyTerms" element={<PrivacyTerm />} />
         <Route path="/thank-you" element={<ThankYouPage />} />
         
         <Route path="/bookappointment" element={<BookApointment />} />
