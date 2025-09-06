@@ -61,6 +61,35 @@ const Footer = () => {
                                 </svg>
 +91-9175129919
                             </p>
+                            <br />
+                            <Link to='/services' className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                                Home Veterinary Care
+                            </Link>
+                            <Link to='/services' className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                                At Home Vets in Pune
+                            </Link>
+                            <Link to='/services' className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                                At Home Vets in Mumbai
+                            </Link>
+                            <Link to='/services' className="text-gray-300 hover:text-[#FE5F62] transition-colors duration-300 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                                Pet Doctor at Home
+                            </Link>
+                            
+
+
+
                         </div>
                     </div>
 
