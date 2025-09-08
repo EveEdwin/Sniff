@@ -24,18 +24,106 @@ const BookApointment = () => {
     agreeToTerms: false
   });
 
+  const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+
+  // Validation functions
+  const validatePhone = (phone) => {
+    const phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(phone);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validateDate = (date) => {
+    if (!date) return false;
+    const selectedDate = new Date(date);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return selectedDate >= today;
+  };
+
+  const formatDateToDisplay = (dateString) => {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    let newValue = type === 'checkbox' ? checked : value;
+
+    // Phone number validation - only allow digits and limit to 10
+    if (name === 'phone') {
+      newValue = value.replace(/\D/g, '').slice(0, 10);
+    }
+
     setFormData({
       ...formData,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: newValue
     });
+
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: ''
+      });
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate form
+    const newErrors = {};
+
+    if (!formData.petName.trim()) {
+      newErrors.petName = 'Pet name is required';
+    }
+
+    if (!formData.ownerName.trim()) {
+      newErrors.ownerName = 'Your name is required';
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!validateEmail(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+    } else if (!validatePhone(formData.phone)) {
+      newErrors.phone = 'Phone number must be exactly 10 digits';
+    }
+
+    if (!formData.date) {
+      newErrors.date = 'Date is required';
+    } else if (!validateDate(formData.date)) {
+      newErrors.date = 'Please select a future date';
+    }
+
+    if (!formData.time) {
+      newErrors.time = 'Time slot is required';
+    }
+
+    if (!formData.agreeToTerms) {
+      newErrors.agreeToTerms = 'You must agree to the terms and conditions';
+    }
+
+    setErrors(newErrors);
+
+    // If there are errors, don't submit
+    if (Object.keys(newErrors).length > 0) {
+      return;
+    }
 
     // Create the S3 client
     const s3Client = new S3Client({
@@ -46,8 +134,13 @@ const BookApointment = () => {
       }
     });
 
-    // Prepare the form data as a JSON object
-    const jsonData = JSON.stringify(formData);
+    // Prepare the form data as a JSON object with formatted date
+    const formattedData = {
+      ...formData,
+      date: formatDateToDisplay(formData.date)
+    };
+    
+    const jsonData = JSON.stringify(formattedData);
     
     const uploadParams = {
       Bucket: 'sniffi-pet-appointments-data' , // Replace with your bucket name
@@ -64,10 +157,16 @@ const BookApointment = () => {
       // Store data locally
       localStorage.setItem('appointmentData', jsonData);
 
-      // Navigate to the Thank You page
-      navigate('/thank-you');
+      // Show success message
+      setSubmitted(true);
+
+      // Navigate to the Thank You page after a delay
+      setTimeout(() => {
+        navigate('/thank-you');
+      }, 2000);
     } catch (err) {
       console.error('Error uploading data to S3', err);
+      alert('There was an error scheduling your appointment. Please try again.');
     }
   };
 
@@ -132,9 +231,15 @@ const BookApointment = () => {
                       name="petName"
                       value={formData.petName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent"
+                      className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent ${
+                        errors.petName ? 'border-red-500' : 'border-gray-300'
+                      }`}
+                      placeholder="Enter your pet's name"
                       required
                     />
+                    {errors.petName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.petName}</p>
+                    )}
                   </div>
                   <div>
                     <label className="block text-gray-700 font-medium mb-2" htmlFor="petType">
@@ -172,11 +277,41 @@ const BookApointment = () => {
                       name="ownerName"
                       value={formData.ownerName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent"
+                      className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent ${
+                        errors.ownerName ? 'border-red-500' : 'border-gray-300'
+                      }`}
                       required
                     />
+                    {errors.ownerName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.ownerName}</p>
+                    )}
                   </div>
                   <div>
+                    <label className="block text-gray-700 font-medium mb-2" htmlFor="email">
+                      Email Address*
+                    </label>
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <FaEnvelope className="text-gray-400" />
+                      </div>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={`w-full pl-10 px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent ${
+                          errors.email ? 'border-red-500' : 'border-gray-300'
+                        }`}
+                        placeholder="your.email@example.com"
+                        required
+                      />
+                    </div>
+                    {errors.email && (
+                      <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                    )}
+                  </div>
+                  <div className="md:col-span-2">
                     <label className="block text-gray-700 font-medium mb-2" htmlFor="phone">
                       Phone Number*
                     </label>
@@ -190,10 +325,18 @@ const BookApointment = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full pl-10 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent"
+                        maxLength="10"
+                        className={`w-full pl-10 px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent ${
+                          errors.phone ? 'border-red-500' : 'border-gray-300'
+                        }`}
+                        placeholder="1234567890"
                         required
                       />
                     </div>
+                    {errors.phone && (
+                      <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                    )}
+                    <p className="text-gray-500 text-sm mt-1">Enter exactly 10 digits</p>
                   </div>
                 </div>
               </div>
@@ -218,10 +361,21 @@ const BookApointment = () => {
                         name="date"
                         value={formData.date}
                         onChange={handleChange}
-                        className="w-full pl-10 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent"
+                        min={new Date().toISOString().split('T')[0]}
+                        className={`w-full pl-10 px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent ${
+                          errors.date ? 'border-red-500' : 'border-gray-300'
+                        }`}
                         required
                       />
                     </div>
+                    {errors.date && (
+                      <p className="text-red-500 text-sm mt-1">{errors.date}</p>
+                    )}
+                    {formData.date && (
+                      <p className="text-gray-500 text-sm mt-1">
+                        Selected: {formatDateToDisplay(formData.date)}
+                      </p>
+                    )}
                   </div>
                  <div>
   <label className="block text-gray-700 font-medium mb-2" htmlFor="time">
@@ -236,7 +390,9 @@ const BookApointment = () => {
       name="time"
       value={formData.time}
       onChange={handleChange}
-      className="w-full pl-10 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent"
+      className={`w-full pl-10 px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:border-transparent ${
+        errors.time ? 'border-red-500' : 'border-gray-300'
+      }`}
       required
     >
       <option value="" disabled>Select a time slot</option>
@@ -246,6 +402,9 @@ const BookApointment = () => {
       <option value="6PM-9PM">6PM - 9PM</option>
     </select>
   </div>
+  {errors.time && (
+    <p className="text-red-500 text-sm mt-1">{errors.time}</p>
+  )}
 </div>
 
                   <div className="md:col-span-2">
@@ -288,26 +447,32 @@ const BookApointment = () => {
               </div>
 
               <div className="mb-8">
-                <div className="flex items-center">
+                <div className="flex items-start">
                   <input
                     type="checkbox"
                     id="agreeToTerms"
                     name="agreeToTerms"
                     checked={formData.agreeToTerms}
                     onChange={handleChange}
-                    className="w-4 h-4 text-[#FE5F62] focus:ring-[#FE5F62] border-gray-300 rounded"
+                    className={`w-4 h-4 text-[#FE5F62] focus:ring-[#FE5F62] border-gray-300 rounded mt-1 ${
+                      errors.agreeToTerms ? 'border-red-500' : ''
+                    }`}
                     required
                   />
                   <label htmlFor="agreeToTerms" className="ml-2 block text-gray-700">
                     I agree to the <a href="/terms" className="text-[#FE5F62] hover:underline">Terms & Conditions*</a>
                   </label>
                 </div>
+                {errors.agreeToTerms && (
+                  <p className="text-red-500 text-sm mt-1">{errors.agreeToTerms}</p>
+                )}
               </div>
 
               <div className="text-center">
                 <button
                   type="submit"
-                  className="px-8 py-3 bg-[#FE5F62] text-white rounded-md hover:bg-[#e45457] transition-colors text-lg font-medium"
+                  className="px-8 py-3 bg-[#FE5F62] text-white rounded-md hover:bg-[#e45457] transition-colors text-lg font-medium focus:outline-none focus:ring-2 focus:ring-[#FE5F62] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={!formData.agreeToTerms}
                 >
                   Schedule Appointment
                 </button>

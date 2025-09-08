@@ -8,7 +8,7 @@ import TandC from "./Pages/TandC";
 import Component16 from "./preComponent/C19";
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import ThankYouPage from "./Pages/ThankYouPage"
-import routes from "./routes/service";
+// import routes from "./routes/service";
 import VetConsultation from "./Pages/VetConsultation";
 import Vaccination from "./Pages/Vaccination";
 import Wellness from "./Pages/Wellness";

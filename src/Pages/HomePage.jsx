@@ -64,7 +64,7 @@ const HomePage = () => {
       setFeatures(res.data);
       setLoading(false);
     } catch (err) {
-      setError("Failed to fetch features");
+      setError("Failed to fetch features", err);
       setLoading(false);
     }
   };
